@@ -19,5 +19,8 @@
   "dependencies": {
     "jquery": ">=1.7.1",
     "jasmine-jquery": "~1.0.0"
-  }
+  },
+  "main": [
+    "dist/storeApp.js"
+  ]
 }
