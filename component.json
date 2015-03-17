@@ -1,0 +1,14 @@
+{
+  "name": "ds-218",
+  "version": "1.1.0",
+  "description": "ds-218",
+  "homepage": "http://www.groceryshopping.net",
+  "author": "Tom Nguyen",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gsn/ds-218.git"
+  },
+  "keywords": [
+    "website"
+  ]
+}
