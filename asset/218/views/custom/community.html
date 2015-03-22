@@ -1,5 +1,4 @@
-﻿<script src="//cdn.gsngrocers.com/script/lib/instafeed.min.js"></script>
-<div class="row">
+﻿<div class="row">
     <div class="col-md-2 sidebar">
         <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
         <div class="row" data-ng-non-bindable="">
@@ -58,7 +57,7 @@
             <div id="text-5" class="widget widget_text social-widget">
                 <h3 class="font-book text-center">Instagram</h3>
                 <a href="http://instagram.com/marianosmarket#" target="_blank" class="widget-follow">follow MarianosMarket</a>
-                <div class="textwidget instagram" id="instafeed"></div>
+                <div class="textwidget instagram" id="instafeed" data-get="user" data-user-id="322031578" data-access-token="322031578.467ede5.c41bcd11335247f387827bd63c32daec"></div>
             </div>
         </div>
         <div class="pinterestsection">
@@ -74,11 +73,4 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    var feed = new Instafeed({
-        get: 'user',
-        userId: 322031578,
-        accessToken: '322031578.467ede5.c41bcd11335247f387827bd63c32daec'
-    });
-    feed.run();
-</script>
+<script src="//cdn-staging.gsngrocers.com/script/lib/jquery.instafeed.min.js"></script>
