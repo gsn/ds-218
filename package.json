@@ -55,6 +55,6 @@
   },
   "scripts": {
     "test": "gulp test",
-    "postinstall": "node node_modules/bower/bin/bower install"
+    "postinstall": "node node_modules/bower/bin/bower install && node node_modules/gulp/bin/gulp"
   }
 }
