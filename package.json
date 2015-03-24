@@ -2,7 +2,7 @@
   "name": "ds-218",
   "description": "Marianos repository",
   "version": "1.1.0",
-  "homepage": "https://github.com/gsn/gs-218",
+  "homepage": "https://github.com/gsn/cdn",
   "author": {
     "name": "Grocery Shopping Network",
     "email": "tech@groceryshopping.net",
@@ -55,6 +55,6 @@
   },
   "scripts": {
     "test": "gulp test",
-    "postinstall": "node node_modules/bower/bin/bower install"
+    "postinstall": "node node_modules/bower/bin/bower install && node node_modules/gulp/bin/gulp"
   }
 }
