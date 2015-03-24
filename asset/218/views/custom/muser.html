@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-2 sidebar">
+        <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+    </div>
+   <div class="col-md-10 featuredTasteMaker" data-ng-init="item = {src:  'http://www.youtube.com/embed/SCSzKT-vYQI?html5=1'}">
+        <a href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/modal-video.html')" data-ng-click="showModal()"><img alt="Michael Muser" class="tasteMakerImage" data-ng-src="{{getContentUrl('/images/michaelMuser/michaelMuserHeader.jpg')}}" /></a>
+    </div>
+</div>
+<div class="clearfix"> 
+    <div class="row chef">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main pull-right">
+
+            <div id="chef" class="col-md-12 chefImageGallery" data-ng-init="tasteMakerName = 'michaelMuser'">
+                <span data-model="{ id: '01', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+                <span data-model="{ id: '02', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '03', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '04', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '05', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '06', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '07', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '08', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '09', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '10', title: '', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-4 tipBlockOne">
+                        <img alt="food tip" data-ng-src="{{getContentUrl('/images/michaelMuser/104108430.png')}}" />
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                    <div class="col-md-4 tipBlockTwo">
+                        <img alt="food tip" data-ng-src="{{getContentUrl('/images/michaelMuser/182387091.png')}}" />
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                    <div class="col-md-4 tipBlockThree">
+                        <img alt="food tip" data-ng-src="{{getContentUrl('/images/michaelMuser/020609703.png')}}" />
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="row host" data-ng-include="getContentUrl('/views/custom/host.html')"></div>
+            </div> 
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 side pull-left">
+            <div data-ng-include="getContentUrl('/views/tasteSidebar.html')"></div>
+        </div>
+    </div>    
+</div>
+
