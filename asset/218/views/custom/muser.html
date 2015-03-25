@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-2 sidebar">
+        <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+    </div>
+   <div class="col-md-10 featuredTasteMaker" data-ng-init="item = {src:  'http://www.youtube.com/embed/SCSzKT-vYQI?html5=1'}">
+        <a href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/modal-video.html')" data-ng-click="showModal()"><img alt="Michael Muser" class="tasteMakerImage" data-ng-src="{{getContentUrl('/images/michaelMuser/michaelMuserHeader.jpg')}}" /></a>
+    </div>
+</div>
+<div class="clearfix"> 
+    <div class="row chef">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main pull-right">
+            <div class="col-md-6 chefInfo">
+                <p>Michael not only shares a passion for wine, his enthusiasm spills everywhere. He urges you to make pairings fun, and finds plenty to play with at Mariano’s. Michael majored in theatre in California, attended the exclusive International Sommelier Alliance, and worked the harvest in Burgundy and Champagne. Then he came home to Chicago. At the Hotel Peninsula, he met Chef Curtis Duffy, and the two started Grace in 2011. Michael, a James Beard Award nominee, now spends time polishing their three Michelin Stars, and reigns as one of Food & Wine’s Sommeliers of the Year.</p>
+            </div>
+            <div id="chef" class="col-md-6 chefImageGallery" data-ng-init="tasteMakerName = 'michaelMuser'">
+                <span data-model="{ id: '01', title: 'Michael likes to match sweet with sweet so he pairs this Moscato d’Asti right alongside sweet foods. Make sure it’s sweet enough so that it’s equal to if not greater than the food. It’s from a noble producer and will pair well with desserts plus it has some amazing effervescence.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+                <span data-model="{ id: '02', title: 'For BYOB or the perfect gift, Michael suggests this wine from the Alsace, Gentil Hugel because it blends in with the crowd perfectly.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '03', title: 'To balance out those citrus notes, Michael pours the lovely bottle of Spanish Naia because it’s balanced with lemon peel, lime zest and  tropical aromatics.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '04', title: 'Everyone loves Mariano’s Oki Sushi, including Michael. One of his favorite wines to pair with sushi is Burgan Albarino because it’s a massively aromatic, very clean and vibrant white wine.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '05', title: 'Michael fuels up at VERO with a large Bella Bold before a busy night at Grace.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '06', title: 'His go-to dish at home is chimichurri sauce. Michael picks out fresh flat leaf Italian parsley for this quick and easy sauce.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '07', title: 'Michael likes to remind people not to take wine so seriously. You can grab a simple, delicious and fun bottle of rose like this Masciarelli Sancerre as a casual snack wine, to drink with chips or popcorn.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '08', title: 'Strip steak on the grill- full of flavor and Michael’s pick when he has a rare night off.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '09', title: 'Michael grabs some garlic to finish off the chimichurri sauce.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+                <span data-model="{ id: '10', title: 'Not only does he love fine French wine but Michael loves the selection of French cheese from Mariano’s too!', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="row michaelBlocks">
+                    <div class="col-md-4 tipBlockOne">
+                        <img alt="food tip" data-ng-src="{{getContentUrl('/images/michaelMuser/020609703.png')}}" />
+                        <p>Finding a wine to enjoy with dessert can be daunting. Michael, never bashful, matches sweet with sweet. He suggests the clean effervescence of a sparkling wine, maybe the Moscato d’Asti from Cascinetta Vieta.</p>
+                    </div>
+                    <div class="col-md-4 tipBlockTwo">
+                        <img alt="food tip" data-ng-src="{{getContentUrl('/images/michaelMuser/182387091.png')}}" />
+                        <p>Despite founding one of Chicago’s most impressive restaurants, Michael reminds us, “you don’t have to take wine seriously all the time.” Hitting the couch with a bowl of popcorn or chips? Open up a Rosé.</p>
+                    </div>
+                    <div class="col-md-4 tipBlockThree">
+                        <img alt="food tip" data-ng-src="{{getContentUrl('/images/michaelMuser/104108430.png')}}" />
+                        <p>When you think of spicy food, you might see red. Michael says no, “that will actually crank up the spice of the dish.” He advises a dry white instead, perhaps a Riesling, with a bit of sweetness that will tone down the spice.</p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="row host" data-ng-include="getContentUrl('/views/custom/host.html')"></div>
+            </div> 
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 side pull-left">
+            <div data-ng-include="getContentUrl('/views/tasteSidebar.html')"></div>
+        </div>
+    </div>    
+</div>
+

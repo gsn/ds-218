@@ -416,13 +416,19 @@
   margin-left: 0;
 }
 
-.donnieBlocks {
+.donnieBlocks,
+.michaelBlocks {
   padding-top: 10px;
   text-align: center;
 }
 
-.donnieBlocks  > div > img {
+.donnieBlocks  > div > img,
+.michaelBlocks  > div > img {
   margin-left: 0;
+}
+
+.michaelBlocks  > div > img {
+  padding-bottom: 10px;
 }
 
 .chefRecipe.donnieRecipe {
