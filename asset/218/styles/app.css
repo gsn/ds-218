@@ -1444,6 +1444,8 @@ td.nutr-border {
   width: 100%;
   padding-top: 2pt;
   padding-bottom: 2pt;
+  font-family: Arial;
+  font-size: 0.85em;
 }
 
 /*---------- Community ----------*/
