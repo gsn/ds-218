@@ -325,11 +325,12 @@
 .chef.psaltis .tipBlockTwo h4{
   padding-left: 38px;
 }
-
+.chef.izard .restaurants h4,
 .chef.psaltis .restaurants h4{
   padding-left: 45px;
 }
 
+.chef.izard .chefRecipe h5,
 .chef.psaltis .chefRecipe h5{
   max-width: 340px;
 }
