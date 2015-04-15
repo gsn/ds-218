@@ -335,6 +335,20 @@
   max-width: 340px;
 }
 
+.chef.izard .chefCart h4{
+  text-align: center;
+
+}
+
+@media (min-width: 992px){
+	.chef.izard .chefCart h4 {
+	    margin-top: -30px;
+	}
+}
+.chef.izard .chefCart .chefImageGallery{
+  padding-left: 10px;
+}
+
 .featuredTasteMaker {
   padding: 0 0 92px;
   background-color: #ede7d7;
