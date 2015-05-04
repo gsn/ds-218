@@ -325,6 +325,15 @@
 .chef.psaltis .tipBlockTwo h4{
   padding-left: 38px;
 }
+
+.chef.zimmerman .restaurants,
+.chef.zimmerman .chefRecipe{
+	text-align: center;
+}
+.chef.zimmerman .chefRecipe img{
+	  margin-left: auto;
+}
+
 .chef.izard .restaurants h4,
 .chef.psaltis .restaurants h4{
   padding-left: 45px;
@@ -335,17 +344,19 @@
   max-width: 340px;
 }
 
-.chef.izard .chefCart h4{
+.chef.izard .chefCart h4,
+.chef.zimmerman .chefCart h4{
   text-align: center;
-
 }
 
 @media (min-width: 992px){
-	.chef.izard .chefCart h4 {
+	.chef.izard .chefCart h4 ,
+	.chef.zimmerman .chefCart h4{
 	    margin-top: -30px;
 	}
 }
-.chef.izard .chefCart .chefImageGallery{
+.chef.izard .chefCart .chefImageGallery,
+.chef.zimmerman .chefCart .chefImageGallery{
   padding-left: 10px;
 }
 
