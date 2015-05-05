@@ -181,6 +181,10 @@
             templateUrl: gsn.getContentUrl('/views/unsubscribe.html'),
             caseInsensitiveMatch: true
           })
+          .when('/zimmerman', {
+            templateUrl: gsn.getContentUrl('/views/custom/zimmerman.html'),
+            caseInsensitiveMatch: true
+          })
           .when('/izard', {
             templateUrl: gsn.getContentUrl('/views/custom/izard.html'),
             caseInsensitiveMatch: true
