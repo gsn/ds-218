@@ -10,6 +10,6 @@
   <br />  
 </div>
 <div class="modal-footer">
-  <button class="btn btnMarianos" ng-click="install()">Continue</button>
-  <button class="btn btnMarianos" ng-click="cancel()">Cancel</button>
+  <a class="btn btnMarianos" data-ng-href="{{gcprinter.getDownload()}}" target="_blank">Continue</a>
+  <button class="btn btnMarianos" ng-click="closeModal()">Cancel</button>
 </div>

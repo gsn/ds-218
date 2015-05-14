@@ -71,9 +71,10 @@
   </div>
 
   <div class="hidden" style="display:none">
-    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-notinstalled.html')" data-show-if="printer.notinstalled"></div>
-    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-notsupported.html')" data-show-if="printer.notsupported"></div>
-    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-blocked.html')" data-show-if="printer.blocked"></div>
-    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-printed.html')" data-show-if="printer.printed != null"></div>
+    <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-install.html')" data-show-if="printer.notinstalled"></div>
+    <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-blocked-noprint.html')" data-show-if="printer.notsupported"></div>
+    <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-blocked.html')" data-show-if="printer.blocked"></div>
+    <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-result.html')" data-show-if="printer.printed != null"></div>
+    <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-ready.html')" data-show-if="printer.total > 0"></div>
   </div>
 </div>
