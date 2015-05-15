@@ -118,6 +118,7 @@ node_modules
 *.pubxml
 
 # ignoring folders
+.DS_Store
 circulars/
 clientuploads/
 products/
