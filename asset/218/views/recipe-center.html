@@ -80,8 +80,8 @@
     </div>
     <div class="row">
       <div class="col-md-6 text-center">
-        <div class="recipeArticle">
-          <a data-ng-href="/article/{{vm.featuredArticle.ArticleId}}" data-analytics-on="click" data-analytics-event="ClickFeaturedArticle" data-analytics-label="{{vm.featuredArticle.Title}}" data-analytics-category="Recipe">
+        <div class="recipeArticle" style="display: block">
+          <a data-ng-href="/article?id={{vm.featuredArticle.ArticleId}}" data-analytics-on="click" data-analytics-event="ClickFeaturedArticle" data-analytics-label="{{vm.featuredArticle.Title}}" data-analytics-category="Recipe">
             <h3 class="font-demi">{{vm.featuredArticle.Title}}</h3>
             <img data-ng-src="{{vm.featuredArticle.ImageUrl}}">
             <p data-ng-bind="vm.featuredArticle.Teaser"></p>
@@ -89,8 +89,8 @@
         </div>
       </div>
       <div class="col-md-6 text-center">
-        <div class="recipeArticle">
-          <a data-ng-href="/article/{{vm.cookingTip.ArticleId}}" data-analytics-on="click" data-analytics-event="ClickCookingTip" data-analytics-label="{{vm.cookingTip.Title}}" data-analytics-category="Recipe">
+        <div class="recipeArticle" style="display: block">
+          <a data-ng-href="/article?id={{vm.cookingTip.ArticleId}}" data-analytics-on="click" data-analytics-event="ClickCookingTip" data-analytics-label="{{vm.cookingTip.Title}}" data-analytics-category="Recipe">
             <h3 class="font-demi">{{vm.cookingTip.Title}}</h3>
             <img data-ng-src="{{vm.cookingTip.ImageUrl}}">
             <p data-ng-bind="vm.cookingTip.Teaser"></p>
