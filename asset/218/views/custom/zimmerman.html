@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-md-2 sidebar">
+        <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+    </div>
+   <div class="col-md-10 featuredTasteMaker" data-ng-init="item = {src:  'http://www.youtube.com/embed/PoLNRz8Bwi8s?html5=1'}">
+        <a href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/modal-video.html')" data-ng-click="showModal()"><img alt="Andrew Zimmerman" class="tasteMakerImage" data-ng-src="{{getContentUrl('/images/andrewZimmerman/header.jpg')}}" /></a>
+    </div>
+</div>
+<div class="clearfix"> 
+    <div class="row chef zimmerman">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main pull-right">
+            <div class="col-md-7 chefInfo">
+				<p>Once an aspiring rock star in New York, Andrew Zimmerman is now a rock star of the Chicago culinary scene as the executive chef of Sepia, a premier restaurant in the West Loop.</p>
+				<p>Andrew’s style can be best described as New American Cuisine, assimilating flavors from all cultures. His raw instincts, attention to detail and high ratings got him a James Beard Foundation Award nomination for Best Chef Great Lakes in 2015, as well as a spot on Iron Chef America, where he fought and won the cream cheese battle.</p>
+            </div>
+			<div class="col-md-5 chefCart">
+				<h4>What’s in Andrew’s Cart</h4>
+				<div id="chef" class="chefImageGallery" data-ng-init="tasteMakerName = 'andrewZimmerman'">
+					<span data-model="{ id: '01', title: 'Mariano’s takes care of juicing all my fresh vegetables like carrot and beet juice. I pick up Mariano’s Fresh Squeezed Juice almost every day.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '02', title: 'Tea time was a real thing in my house growing up so I have fond memories of Digestive biscuits, both plain and chocolate. And the plain ones are great with sharp cheddar.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '03', title: 'I know I’m supposed to be a fancy chef but I love Brunkow cold pack cheese. It’s perfect when I get home and want a late night snack.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '04', title: 'If you’re to eat butter you might as well eat good, proper butter like Kerrygold Butter.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '05', title: 'Few things make food more exciting than some heat. Heat mixed with enticing spices is even better such as this green Mina Harissa, which is hotter than the red.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '06', title: 'Really good vinegar is a revelation and will make you rethink salad. O Champagne Vinegar is a good one. Use it with abandon.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '07', title: 'Top-notch Bronze die-cut pasta like Gentile imported from Italy is totally worth it. In the grand scheme, pasta is affordable and really good pasta is only a little more money.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '08', title: 'The first and last word in canned tomatoes is San Marzano. You just can’t beat them. They are packed in a tomato puree thicker than nearly all other canned tomato varieties and they have a richer, deeper flavor.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '09', title: 'These crazy herb-bitter flavor and adorable little bottles are the best. Underberg is a super cool disgestif you find in the international aisle.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '10', title: 'Mariano’s has a fantastic meat case and it always has beautiful grade steaks. My personal favorites are the bone-in rib eye and the thick-cut bacon.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '11', title: 'Take some time and select a really nice olive oil from the huge selection that Mariano’s offers. I try different ones, like the bottle of Academia Barilla. It makes your food more personal and taste much better.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '12', title: 'The selection of organic produce at Mariano’s is really impressive. They have made a commitment to having great organic produce and it’s always my first choice. ', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+				</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col-md-6 restaurants">
+					<h4>Andrew's restaurant</h4>
+                    <a href="http://www.sepiachicago.com" target="_blank">
+						<img alt="Sepia" data-ng-src="{{getContentUrl('/images/andrewZimmerman/logo.png')}}" />
+						<h5>Sepia</h5>
+                    </a>
+                </div>
+                <div class="col-md-6 chefRecipe">
+                    <a href="recipe?id=71797">
+                        <img alt="" data-ng-src="{{getContentUrl('/images/andrewZimmerman/recipeIcon.png')}}" />
+                        <h5>Cornmeal Crusted Rainbow Trout, <br/>Black-eyed peas, bacon &amp; pecans</h5>
+                    </a>
+                </div>
+
+                <div class="divider"></div>
+                <div class="row host" data-ng-include="getContentUrl('/views/custom/host.html')"></div>
+            </div> 
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 side pull-left">
+            <div data-ng-include="getContentUrl('/views/tasteSidebar.html')"></div>
+        </div>
+    </div>    
+</div>
+

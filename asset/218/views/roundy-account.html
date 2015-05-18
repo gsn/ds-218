@@ -54,7 +54,7 @@
           <div class="row padding-top-lg">
             <div class="form-group col-md-6" data-ng-class="{'has-success': !MyForm.email.$invalid, 'has-error': MyForm.email.$invalid}">
               <label for="email">Email Address</label>
-              <input tabindex=1 class="form-control" type="email" name="email" placeholder="Enter email address" data-ng-model="profile.Email" maxlength="255" data-ng-required="true" data-ng-disabled="loggedInWithFacebook" />
+              <input tabindex=1 class="form-control" type="email" name="email" placeholder="Enter email address" data-ng-model="profile.Email" maxlength="255" data-ng-required="true" data-ng-disabled="loggedInWithFacebook" data-gsn-auto-fill-sync />
               <div class="checkbox">
                 <label for="receiveemail">
                   <input tabindex=3 type="checkbox" name="receiveemail" data-ng-model="profile.ReceiveEmail">
@@ -80,26 +80,26 @@
             <div class="col-md-6">
               <div class="form-group "  data-ng-class="{'has-success': !MyForm.firstname.$invalid, 'has-error': MyForm.firstname.$invalid}">
                 <label for="firstname">First Name *</label>
-                <input tabindex=4 class="form-control" type="text" name="firstname" placeholder="Enter first name" maxlength="30" data-ng-model="profile.FirstName" data-ng-required="true" />
+                <input tabindex=4 class="form-control" type="text" name="firstname" placeholder="Enter first name" maxlength="30" data-ng-model="profile.FirstName" data-ng-required="true" data-gsn-auto-fill-sync />
               </div>
               <div class="form-group ">
                 <label for="addressline1">Address</label>
-                <input tabindex=6 class="form-control" type="text" name="addressline1" placeholder="Enter address line 1"  maxlength="55" data-ng-model="profile.AddressLine1" />
+                <input tabindex=6 class="form-control" type="text" name="addressline1" placeholder="Enter address line 1"  maxlength="55" data-ng-model="profile.AddressLine1" data-gsn-auto-fill-sync />
               </div>
               <div class="form-group ">
 
-                <input tabindex=7 class="form-control" type="text" name="addressline2" placeholder="Enter address line 2" maxlength="20" data-ng-model="profile.AddressLine2" />
+                <input tabindex=7 class="form-control" type="text" name="addressline2" placeholder="Enter address line 2" maxlength="20" data-ng-model="profile.AddressLine2" data-gsn-auto-fill-sync />
               </div>
             </div>
             <div class="form-group col-md-6"  data-ng-class="{'has-success': !MyForm.lastname.$invalid, 'has-error': MyForm.lastname.$invalid}">
               <label for="lastname">Last Name *</label>
-              <input tabindex=5 class="form-control" type="text" name="lastname" placeholder="Enter last name" maxlength="40" data-ng-model="profile.LastName" data-ng-required="true" />
+              <input tabindex=5 class="form-control" type="text" name="lastname" placeholder="Enter last name" maxlength="40" data-ng-model="profile.LastName" data-ng-required="true" data-gsn-auto-fill-sync />
             </div>
           </div>
           <div class="row">
             <div class="form-group col-md-5">
               <label for="city">City</label>
-              <input tabindex=8 class="form-control" type="text" name="city" placeholder="Enter city" maxlength="30" data-ng-model="profile.City" />
+              <input tabindex=8 class="form-control" type="text" name="city" placeholder="Enter city" maxlength="30" data-ng-model="profile.City" data-gsn-auto-fill-sync />
             </div>
             <div class="form-group col-md-3">
               <label for="state">
@@ -110,7 +110,7 @@
             </div>
             <div class="form-group col-md-4" data-ng-class="{'has-error': MyForm.zipcode.$invalid}">
               <label for="zipcode">Zip Code</label>
-              <input tabindex="10" class="form-control" type="text" name="zipcode"  ui-mask="?99999-9999" data-ng-model="profile.PostalCode" />
+              <input tabindex="10" class="form-control" type="text" name="zipcode"  ui-mask="?99999-9999" data-ng-model="profile.PostalCode" data-gsn-auto-fill-sync />
             </div>
           </div>          
         </div>
