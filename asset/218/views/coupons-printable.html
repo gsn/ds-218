@@ -57,6 +57,16 @@
           </div>
         </div>
         <div class="coupons">
+          <div class="center">
+          <h2 style="color: red">***** Attention Printable Coupon Users*****</h2>
+<p>
+Our printer driver has been recently updated.  Please update your printer driver to continue to use Printable Coupons.  You will be required to uninstall and reinstall the printer driver before you will be able to print coupons.  Please follow <a href="https://gsn.github.com/gcprinter/example/help.html">these instructions.</a></p>
+          </div>
+          <div class="center" data-ng-show="printer.isChrome">
+          <h2 style="color: red">*****ATTENTION GOOGLE CHROME USERS*****</h2>
+<p>
+We are experiencing functionality issues on the Printable Coupons tab for users of the Google Chrome Browser. While we work to restore full functionality, please use an alternate browser such as Internet Explorer or Firefox to print coupons.  We appreciate your understanding while we work toward a full resolution.</p>
+          </div>
           <div data-ng-show="selectedCoupons.items.length == 0">No items found</div>
           <div class="row" data-infinite-scroll="loadMore()">
             <div class=" col-lg-4 col-md-6 col-xs-12 col-sm-6 savingsInfoContainer"
