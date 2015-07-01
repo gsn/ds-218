@@ -13,7 +13,7 @@
             <img src="{{getContentUrl('/images/e-clips-logo.png')}}" />
             Digital Coupons
           </div>
-          <div class="col-md-5 tab tab-right hidden-xs" data-ng-click="goUrl('/coupons/printable')">Printable Coupons</div>
+         <!--  <div class="col-md-5 tab tab-right hidden-xs" data-ng-click="goUrl('/coupons/printable')">Printable Coupons</div> -->
         </div>
       </div>
     </div>
@@ -82,6 +82,11 @@
             </button>
           </div>
         </div>
+		<div style="text-align: center">
+          <h2 style="color: red; text-align: center;">*****ATTENTION *****</h2>
+<p>
+We are experiencing functionality issues on the Printable Coupons tab. While we work to restore full functionality, the printable coupons tab has been removed. We apologize for this inconvenience and will have this issue resolved soon.</p>
+          </div>
         <div data-ng-show="selectedCoupons.items.length == 0">No items found</div>
 
         <div class="row" data-ng-show="selectedCoupons.targeted.length > 0 && sortBy == 'EndDate'">
