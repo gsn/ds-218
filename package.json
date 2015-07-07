@@ -1,6 +1,6 @@
 {
-  "name": "ds-218",
-  "description": "Marianos repository",
+  "name": "ds-cdn",
+  "description": "digital store repository",
   "version": "1.1.0",
   "homepage": "https://github.com/gsn/cdn",
   "author": {
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:gsn/ds-218.git"
+    "url": "git@github.com:gsn/cdn.git"
   },
   "keywords": [
     "website"
@@ -33,28 +33,23 @@
     "ejs": "*",
     "body-parser": "*",
     "method-override": "*",
-    "bower": "*",
-    "grunt": "~0.4.5",
-    "grunt-contrib-jasmine": "~0.8.2",
     "gulp": "~3.8.10",
-    "gulp-grunt": "~0.5.2",
     "gulp-header": "~1.2.2",
-    "gulp-jshint": "~1.9.0",
     "gulp-rename": "~1.2.0",
     "gulp-uglify": "~1.1.0",
-    "gulp-webpack": "^1.2.0",
     "gulp-coffee": "*",
     "gulp-concat": "~2.3.4",
     "gulp-util": "*",
     "gulp-git": "~1.1.0",
+    "gulp-replace": "*",
     "run-sequence": "~1.0.2",
     "jshint-stylish": "^1.0.0"
   },
   "engines": {
-    "node": ">= 0.9.0"
+    "node": ">= 0.12.0"
   },
   "scripts": {
     "test": "gulp test",
-    "postinstall": "node node_modules/bower/bin/bower install && node node_modules/gulp/bin/gulp"
+    "postinstall": "node node_modules/gulp/bin/gulp"
   }
 }
