@@ -32,10 +32,9 @@
 <div>open: <span itemprop="openingHours">{{marker.location.PharmacyHours}}</span></div>
 <div data-ng-if="marker.location.PharmacyPhone">phone: <span itemprop="telephone">{{marker.location.PharmacyPhone}}</span></div>
 </li>
-<!--<li data-ng-bind-html="marker.location.Misc1"></li>
-<li data-ng-bind-html="marker.location.Misc2"></li>
-<li data-ng-bind-html="marker.location.Misc3"></li>-->
-<li data-ng-include="getContentUrl('/views/amenities.html')"></li>
+<li data-ng-bind-html="marker.location.Misc1" data-ng-if="marker.location.Misc1"></li>
+<li data-ng-bind-html="marker.location.Misc2" data-ng-if="marker.location.Misc2"></li>
+<li data-ng-bind-html="marker.location.Misc3" data-ng-if="marker.location.Misc3"></li>
 
 <li><a href="javascript:void(0)" data-ng-click="selectStore(marker)" class="btn">select store</a></li>
 </ul>
