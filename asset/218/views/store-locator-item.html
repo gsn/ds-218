@@ -11,12 +11,6 @@
 </div>
 <ul>
 <li>
-<address>
-{{marker.location.PrimaryAddress}}<br>
-{{marker.location.City}}, {{marker.location.StateName}} {{marker.location.PostalCode}}<br>
-{{marker.location.Phone}}
-<i data-ng-if="searchCompleted">{{marker.location.zDistance}} miles</i>
-</address>
 <address itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
 <span itemprop="streetAddress">{{marker.location.PrimaryAddress}}</span><br>
 <span itemprop="addressLocality">{{marker.location.City}}</span>, <span itemprop="addressRegion">{{marker.location.StateName}}</span> <span itemprop="postalCode">{{marker.location.PostalCode}}</span><br>
