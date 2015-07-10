@@ -193,6 +193,23 @@
   margin-right: 15px;
 }
 
+.amenities { background: url('../images/amenities.png') no-repeat top left; width: 32px; height: 32px;  float: left; display: block; } 
+.amenities.marianos-bbq { background-position: 0 0; } 
+.amenities.marianos-classroom { background-position: 0 -37px; } 
+.amenities.marianos-delivery { background-position: 0 -74px; } 
+.amenities.marianos-demoKitchen { background-position: 0 -111px; } 
+.amenities.marianos-grilling { background-position: 0 -148px; } 
+.amenities.marianos-oliveOil { background-position: 0 -185px; } 
+.amenities.marianos-oysterBar { background-position: 0 -222px; } 
+.amenities.marianos-patio { background-position: 0 -259px; } 
+.amenities.marianos-pharmacy { background-position: 0 -296px; } 
+.amenities.marianos-spiceShop { background-position: 0 -333px; } 
+.amenities.marianos-squeezd { background-position: 0 -370px; } 
+.amenities.marianos-sushi { background-position: 0 -407px; } 
+.amenities.marianos-sweetShop { background-position: 0 -444px; } 
+.amenities.marianos-vero { background-position: 0 -481px; } 
+.amenities.marianos-wineBar { background-position: 0 -518px; } 
+
 .storeName {
   color: #ffffff;
 }
@@ -753,7 +770,9 @@ border-right: none;
   padding: 0;
   margin: 0;
 }
-
+.storeLocationInfo ul  li ul{
+	overflow: hidden;
+}
 .singleStoreInfo {
   color: #7d6d6a;
   margin-bottom: 20px;
