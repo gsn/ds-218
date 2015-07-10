@@ -14,12 +14,12 @@
         </span>
       </div>
     </li>
-    <li data-ng-repeat="menu in siteMenu" class="dropdown" dropdown itemprop="name">
+    <li data-ng-repeat="menu in siteMenu | orderBy:'Position'" class="dropdown" dropdown itemprop="name">
       <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="menu.Name | trustedHtml"></span></a>
       <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-ng-if="menu.Path == '#' || menu.Path == ''" itemprop="name"><span data-ng-bind-html="menu.Name | trustedHtml"></span> <i class="fa fa-caret-down pull-right"></i>
       </a>
       <ul class="dropdown-menu" data-ng-if="menu.Path == '#'" >
-        <li data-ng-repeat="sm in menu.SubMenu" itemprop="name">
+        <li data-ng-repeat="sm in menu.SubMenu | orderBy:'Position'" itemprop="name">
           <a data-ng-href="{{sm.Path}}" itemprop="url" target="{{sm.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="sm.Name | trustedHtml"></span></a>
         </li>  
       </ul>
