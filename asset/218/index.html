@@ -33,10 +33,7 @@
   <![endif]-->
   <!--endhead-->
 </head>
-<body data-ng-cloak="">
-  <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div> 
-
-  <!-- the main container -->
+<body data-ng-cloak=""> 
   <div class="layout-container" data-ng-include="currentLayout"></div>    
   <a class="back-to-top" data-ng-scroll-top="scrollTop" data-offset="50"><i class="fa fa-chevron-up"></i><br />Top</a>    
 
@@ -44,11 +41,12 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>        
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script><!-- support for plugin that were written for jquery below 1.9 -->  
   <script src="//cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.15.2/js/jquery.blueimp-gallery.min.js"></script><!-- for image gallery popup --> 
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js?nocache=1"></script>                                             
 
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>                                             
-  <script src="http://cdn-staging.gsngrocers.com/script/gcprinter/gcprinter.min.js"></script>                                         
-  <script data-gsnid="[chainid]" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.min.js"></script>  
-  <script src="http://cdn-staging.gsngrocers.com/script/gsncore/1.6.0/gsncore.js"></script>       
+  <!-- gsn scripts -->
+  <script src="http://cdn-staging.gsngrocers.com/script/gcprinter/gcprinter.min.js?nocache=1"></script>                                         
+  <script data-gsnid="[chainid]" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.min.js?nocache=1"></script>  
+  <script src="http://cdn-staging.gsngrocers.com/script/gsncore/latest/gsncore.min.js?nocache=1"></script>       
 
   <!-- begin content -->
   <script src="https://clientapix.gsn2.com/api/v1/store/sitecontentscript/[chainid]?nocache=1"></script>
@@ -76,7 +74,8 @@
       m.parentNode.insertBefore(a, m);
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
   </script>
-  <div class="hidden" data-gsn-path-pixel="http://ads.exactdrive.com/seg?add=1701275&t=2&redir=https://secure.adnxs.com/getuid?https://clientapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>                        
+  <div class="hidden" data-gsn-path-pixel="http://ads.exactdrive.com/seg?add=1701275&t=2&redir=https://secure.adnxs.com/getuid?https://clientapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
+  <div data-bs-display-mode="bsDisplayMode"></div>
 <script>var googleTagId = ((globalConfig || {}).data || {}).GoogleTagId;
 if (googleTagId) {
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
