@@ -99,6 +99,38 @@ gulp.task('build-copy', function(cb){
   else cb();
 });
 
+gulp.task('build-deploy', function(cb){
+  var chainId = path.resolve('.').split(path.sep).pop().replace(/\D+/gi, '');
+  var destFile = '../cdn-staging.gsngrocers.com/asset/' + chainId;
+  if (config.branch == 'production') {
+    destFile = '../cdn.gsngrocers.com/asset/' + chainId;
+  }
+  var srcFile = './asset/' + chainId;
+
+  // create destination dir if not exists, assume root folders already exists
+  if (!fs.existsSync(destFile)) {
+    fs.mkdirSync(destFile);
+  }
+
+  var exec = require('child_process').exec,
+      child,
+      cmd = "rsync -avxq '" + path.resolve(srcFile) + "' '" + path.resolve(destFile.replace('/' + chain, '')) + "'";
+
+  if (isWin) {
+    cmd = 'xcopy "' + path.resolve(srcFile) + '" "' + path.resolve(destFile) + '" /E /S /R /D /C /Y /I /Q';
+  }
+
+  console.log(cmd);
+  return child = exec(cmd,
+    function (error, stdout, stderr) {
+      cb();
+      if (error !== null) {
+        console.log(chain + ' exec error: ' + error);
+      }
+  });
+
+});
+
 gulp.task('ds-common-config-for-local-cdn', function(){
   return gulp.src(['./git_components/ds-common/asset/config.json'])
     .pipe(replace('http://cdn-staging.gsngrocers.com', ''))
@@ -108,4 +140,8 @@ gulp.task('ds-common-config-for-local-cdn', function(){
 // run tasks in sequential order
 gulp.task('default', function(cb) {
   runSeq('current-branch', config.tasksClone, 'build-copy', 'ds-common-config-for-local-cdn', cb);
+});
+
+gulp.task('deploy', function(cb) {
+  runSeq('current-branch', 'build-deploy', cb);
 });
