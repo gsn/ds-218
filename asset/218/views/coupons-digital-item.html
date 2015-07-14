@@ -3,9 +3,9 @@
     <div class="imageContainer">
       <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" alt="{{item.Description1}}" />
     </div>
-	<div class="digital" gsn-coupon-popover="" popover-html="<strong>{{item.BrandName}}</strong><p><b>${{item.Description1}}<b></p><p>{{item.Description2}}</p>">
+	<div class="digital" gsn-coupon-popover="" popover-html="<strong>{{item.BrandName}}</strong><p><b>{{item.Description1 | trustedHtml}}</b></p><p>{{item.Description2}}</p>">
       <strong data-ng-bind-html="item.BrandName"></strong>
-	    <p><b data-ng-bind-html="item.Description"></b></p>
+	    <p><b data-ng-bind-html="item.Description1"></b></p>
       <p data-ng-bind-html="item.Description2"></p>
   </div>
   </div>
