@@ -1,17 +1,13 @@
 ﻿<div class="savingsInfo" ng-class="{greyed:isOnClippedList(item)}">
-  <div class="row" data-bindonce="">
+<div class="row">
     <div class="imageContainer">
       <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" alt="{{item.Description1}}" />
     </div>
-    <!--<div class="digital" gsn-coupon-popover="" popover-html="<h5>SAVE ${{item.TopTagLine}}</h5><strong>{{item.BrandName}}</strong><p>{{item.Description2}}</p>">-->
-	<div class="digital" gsn-coupon-popover="" popover-html="<strong>{{item.BrandName}}</strong><p><b>${{item.Description1}}<b></p><p>{{item.Description2}}</p>">
-
-      <!--<h5>SAVE ${{item.TopTagLine}}</h5>-->
+	<div class="digital" gsn-coupon-popover="" popover-html="<strong>{{item.BrandName}}</strong><p><b>{{item.Description1 | trustedHtml}}</b></p><p>{{item.Description2}}</p>">
       <strong data-ng-bind-html="item.BrandName"></strong>
-      <!--<i data-ng-bind-html="item.CategoryName"></i>-->
-	  <p><b>${{item.Description1}}<b></p>
+	    <p><b data-ng-bind-html="item.Description1"></b></p>
       <p data-ng-bind-html="item.Description2"></p>
-    </div>
+  </div>
   </div>
 
   <div class="row buttons">    
