@@ -17,6 +17,7 @@ var config = {
   tasks: [ 'clone-ds', 'copy-ds'],
   tasksClone: [],
   tasksCopy: [],
+  tasksDeploy: [],
   branch: 'master'
 };
 var isWin = /^win/.test(process.platform);
@@ -99,36 +100,51 @@ gulp.task('build-copy', function(cb){
   else cb();
 });
 
-gulp.task('build-deploy', function(cb){
-  var chainId = path.resolve('.').split(path.sep).pop().replace(/\D+/gi, '');
-  var destFile = '../cdn-staging.gsngrocers.com/asset/' + chainId;
+function createDeployTask(chain) {
+  var destFile = '../cdn-staging.gsngrocers.com/asset/' + chain;
   if (config.branch == 'production') {
-    destFile = '../cdn.gsngrocers.com/asset/' + chainId;
+    destFile = '../cdn.gsngrocers.com/asset/' + chain;
   }
-  var srcFile = './asset/' + chainId;
+  var srcFile = './asset/' + chain;
 
   // create destination dir if not exists, assume root folders already exists
   if (!fs.existsSync(destFile)) {
     fs.mkdirSync(destFile);
   }
 
-  var exec = require('child_process').exec,
-      child,
-      cmd = "rsync -avxq '" + path.resolve(srcFile) + "' '" + path.resolve(destFile.replace('/' + chain, '')) + "'";
+  gulp.task('deploy-ds-' + chain, function(cb) {
+    var exec = require('child_process').exec,
+        child,
+        cmd = "rsync -avxq '" + path.resolve(srcFile) + "' '" + path.resolve(destFile.replace('/' + chain, '')) + "'";
 
-  if (isWin) {
-    cmd = 'xcopy "' + path.resolve(srcFile) + '" "' + path.resolve(destFile) + '" /E /S /R /D /C /Y /I /Q';
-  }
+    if (isWin) {
+      cmd = 'xcopy "' + path.resolve(srcFile) + '" "' + path.resolve(destFile) + '" /E /S /R /D /C /Y /I /Q';
+    }
 
-  console.log(cmd);
-  return child = exec(cmd,
-    function (error, stdout, stderr) {
-      cb();
-      if (error !== null) {
-        console.log(chain + ' exec error: ' + error);
-      }
+    console.log(cmd);
+    return child = exec(cmd,
+      function (error, stdout, stderr) {
+        cb();
+        if (error !== null) {
+          console.log(chain + ' exec error: ' + error);
+        }
+    });
   });
 
+  config.tasksDeploy.push('deploy-ds-' + chain);
+}
+
+gulp.task('build-deploy', function(cb){
+  for(var c in config.chains) {
+    var chain = config.chains[c];
+    if (chain != 'common') {
+      createDeployTask(chain);
+    }
+  };
+
+  var chainId = path.resolve('.').split(path.sep).pop().replace(/\D+/gi, '');
+  createDeployTask(chainId);
+  runSeq(config.tasksDeploy, cb);
 });
 
 gulp.task('ds-common-config-for-local-cdn', function(){
