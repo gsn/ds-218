@@ -21,7 +21,7 @@
       <h2 itemprop="name" class="hidden">{{marker.location.StoreName}} Pharmacy</h2>
       <div itemprop="description"></div>
       <div>open: <span itemprop="openingHours">{{marker.location.PharmacyHours}}</span></div>
-      <div data-ng-if="marker.location.PharmacyPhone">phone: <span itemprop="telephone">{{marker.location.PharmacyPhone}}</span></div>
+      <div data-ng-if="marker.location.Settings[20].SettingValue">phone: <span itemprop="telephone">{{marker.location.Settings[20].SettingValue}}</span></div>
     </li>
     <li data-ng-bind-html="marker.location.Misc1" data-ng-if="marker.location.Misc1" style="clear: both"></li>
     <li data-ng-bind-html="marker.location.Misc2" data-ng-if="marker.location.Misc2" style="clear: both"></li>
