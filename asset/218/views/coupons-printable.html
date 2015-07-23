@@ -81,8 +81,8 @@ We are experiencing functionality issues on the Printable Coupons tab for users 
 
   <div class="hidden" style="display:none">
 	<div data-gsn-modal="getThemeUrl('/views/coupons-plugin-install.html')" data-show-if="printer.notinstalled" data-event-to-close="gsnevent:gcprinter-ready"></div>
-    <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-blocked-noprint.html')" data-show-if="printer.notsupported"></div>
-    <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-blocked.html')" data-show-if="printer.blocked"></div>
+    <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-blocked-noprint.html')" data-show-if="printer.notsupported" data-event-to-close="gsnevent:gcprinter-ready"></div>
+    <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-blocked.html')" data-show-if="printer.blocked" data-event-to-close="gsnevent:gcprinter-ready"></div>
     <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-result.html')" data-show-if="printer.printed != null"></div>
     <div data-gsn-modal="getThemeUrl('/views/coupons-plugin-ready.html')" data-show-if="printer.total > 0"></div>
   </div>
