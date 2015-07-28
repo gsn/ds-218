@@ -52,6 +52,10 @@
             storeRequired: true,
             caseInsensitiveMatch: true
           })
+          .when('/coupons/digital', {
+            redirectTo: '/coupons'
+            caseInsensitiveMatch: true
+          })
           .when('/emailpreview/registration', {
             templateUrl: gsn.getContentUrl('/views/email/registration.html'),
             layout: gsn.getContentUrl('/views/layout-empty.html'),
