@@ -41,7 +41,7 @@
 					  <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.ItemTypeId == 2">
 					  {{item.PriceString}}
 					</span>
-					<span data-ng-bind-html="item.Description | trustedHtml"></span>
+					<span data-ng-bind-html="item.Description"></span>
 					<div data-ng-hide="item.IsCoupon" class="price">{{item.PriceString}}</div>
 					<div data-ng-show="item.ItemTypeId == 13">Redeemable one time only.</div>
 					<input style="height: 20px;" placeholder="Comment" data-ng-hide="item.IsCoupon" data-ng-model="item.Comment" ui-keypress="{13:'doUpdateQuantity(item)'}" />  
