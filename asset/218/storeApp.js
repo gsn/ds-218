@@ -47,13 +47,9 @@
             storeRequired: true,
             caseInsensitiveMatch: true
           })
-          /*.when('/coupons/printable', {
+          .when('/coupons/printable', {
             templateUrl: gsn.getContentUrl('/views/coupons-printable.html'),
             storeRequired: true,
-            caseInsensitiveMatch: true
-          })*/
-          .when('/coupons/printable', {
-            redirectTo: '/coupons',
             caseInsensitiveMatch: true
           })
           .when('/coupons/digital', {
