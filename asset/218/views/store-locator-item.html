@@ -1,6 +1,6 @@
 ﻿<div class="storeLocationInfo" itemscope="" itemtype="http://schema.org/Store">
   <a href="javascript:void(0)" data-ng-click="selectStore(marker)">
-    <h4 itemprop="name">{{marker.location.StoreName}}</h4>
+    <h4 data-ng-bind-html="marker.location.StoreName" itemprop="name"></h4>
   </a>
   <div class="hidden meta">
     <div class="store-number">{{marker.location.StoreNumber}}</div>
