@@ -175,6 +175,10 @@
             templateUrl: gsn.getContentUrl('/views/unsubscribe.html'),
             caseInsensitiveMatch: true
           })
+          .when('/aubin', {
+            templateUrl: gsn.getContentUrl('/views/custom/aubin.html'),
+            caseInsensitiveMatch: true
+          })
           .when('/zimmerman', {
             templateUrl: gsn.getContentUrl('/views/custom/zimmerman.html'),
             caseInsensitiveMatch: true
