@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-md-2 sidebar">
+        <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+    </div>
+   <div class="col-md-10 featuredTasteMaker" data-ng-init="item = {src: 'http://www.youtube.com/embed/gysx9WahRds?html5=1'}">
+        <a href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/modal-video.html')" data-ng-click="showModal()"><img alt="Ashlee Aubin" class="tasteMakerImage" data-ng-src="{{getContentUrl('/images/ashleeAubin/header.jpg')}}" /></a>
+    </div>
+</div>
+<div class="clearfix"> 
+    <div class="row chef chef-aligned">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main pull-right">
+            <div class="col-md-6 chefInfo">
+				<p>Chef Ashlee Aubin has been immersed in the Chicago culinary scene for over 10 years, starting with his first position at Home Bistro in Lakeview. Ashlee, a Michigan native, next joined the Zealous team, where he spent four years working his way up to sous chef before finding an opportunity to work for famed chef Grant Achatz at Alinea. Ashlee’s time at Alinea became his most formative culinary experience, and after a year at the restaurant as a chef de partie, he took the chance to move on and opened Wood restaurant in Lakeview. Wood earned wide acclaim and was honored to receive the Michelin Bib Gourmand award for three consecutive years from 2013 to 2015. Now the team from Wood has come together again to open Salero, a modern Spanish restaurant in the heart of the West Loop. Salero garnered immediate praise, including a glowing three-star review from Phil Vettel in the Chicago Tribune, for its subtle and refined take on Spanish flavors. Chicago Magazine has featured Ashlee as one of four chefs to know. And now Ashlee Aubin joins Mariano’s Tastemakers as he shares a few Spanish secrets for his savory paella full of smoky sausage and fresh seafood.</p>
+            </div>
+			<div class="col-md-6 chefCart">
+				<h4>What’s in Ashlee’s Cart</h4>
+				<div id="chef" class="chefImageGallery" data-ng-init="tasteMakerName = 'ashleeAubin'">
+					<span data-model="{ id: '01', title: 'mitica jamon serrano - a few slices of really good ham is my favorite snack.  mariano’s stocks some great prosciuttos, serranos and salamis.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '02', title: 'bel gioioso burrata - fresh burrata used to be really hard to find. now, bel gioioso in wisconsin wisconsin makes a version just as delicious as what you can find imported from italy, but fresher because its local.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '03', title: 'san pellegrino pompelmo soda - i don’t drink much soda because it’s usually too sweet, but the san pellegrino sodas are super tart and refreshing, packed full of citrus flavor.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '04', title: 'wheat thins - my absolute favorite cracker, with just enough flavor to stand up on their own, but also great with dips or cheese.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '05', title: 'metropolis coffee - there are a ton of great coffee roasters in chicago, and mariano’s always stocks a great variety.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '06', title: 'colavita olive oil - we use this olive oil for everything! it’s affordable enough to sauté with,  but also has a great flavor for vinaigrettes.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '07', title: 'agostino recca filets of anchovy in olive oil - the secret weapon in my caesar dressing and green goddess dip. they are a staple in my fridge.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '08', title: 'd.o.p. marzano tomatoes - the most delicious and consistent way to get from october to july. these italian canned tomatoes pack more flavor than their out of season cousins plucked fresh from the ground.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '09', title: 'häagen dazs chocolate ice cream - perfect intense cocoa flavor. häagen dazs always has the smoothest texture.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '10', title: 'fage yogurt - this fat-free yogurt has replaced mayonnaise and sour cream in so many of my recipes. it’s great with jams for breakfast.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '11', title: 'bananas - the most convenient on-the-go breakfast - something i never leave mariano’s without', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '12', title: 'bone-in, skin-on chicken thighs - we grill all summer long - chicken thighs take well to all different marinades and sauces,  and they don’t dry out the way chicken breasts can.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+				</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col-md-4 restaurants ashlee-restaurant1">
+					<h4>Ashlee's restaurant</h4>
+                    <a href="http://salerochicago.com/" target="_blank">
+						<img alt="Salero" data-ng-src="{{getContentUrl('/images/ashleeAubin/Salero_logo.png')}}" />
+						<h5>Salero</h5>
+                    </a>
+                </div>
+                <div class="col-md-4 restaurants">
+					<h4>Ashlee's restaurant</h4>
+                    <a href="http://woodchicago.com/" target="_blank">
+						<img alt="Wood" data-ng-src="{{getContentUrl('/images/ashleeAubin/Wood_logo.png')}}" />
+						<h5>Wood restaurant in Lakeview</h5>
+                    </a>
+                </div>
+                <div class="col-md-4 chefRecipe">
+                    <a href="recipe?id=72012">
+                        <img alt="" data-ng-src="{{getContentUrl('/images/ashleeAubin/recipeIcon.png')}}" />
+                        <h5>Spanish rice with langoustines and clams</h5>
+                    </a>
+                </div>
+
+                <div class="divider"></div>
+                <div class="row host" data-ng-include="getContentUrl('/views/custom/host.html')"></div>
+            </div> 
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 side pull-left">
+            <div data-ng-include="getContentUrl('/views/tasteSidebar.html')"></div>
+        </div>
+    </div>    
+</div>
+
