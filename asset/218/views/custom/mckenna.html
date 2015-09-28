@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-md-2 sidebar">
+        <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+    </div>
+   <div class="col-md-10 featuredTasteMaker" data-ng-init="item = {src: 'http://www.youtube.com/embed/Uus8Z4AewXo?html5=1'}">
+        <a href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/modal-video.html')" data-ng-click="showModal()"><img alt="Charlie McKenna" class="tasteMakerImage" data-ng-src="{{getContentUrl('/images/charlieMcKenna/header.jpg')}}" /></a>
+    </div>
+</div>
+<div class="clearfix"> 
+    <div class="row chef flex">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main pull-right">
+            <div class="col-md-7 chefInfo">
+				<p>Chef Charlie McKenna is an award-winning chef trained at the Culinary Institute of America who gave up cooking in fine dining restaurants to get back to his southern roots and passion for BBQ. Born and raised in Greenville, South Carolina, his talents brought him to Chicago cooking in some of the best kitchens (Avenues, Tru) but his true love was southern food. There were a lot of family meals at his grandmother’s house and his father was in the military and would cater BBQ on the air base. It was a competition that he and his father visited that ignited the passion for BBQ for this fine dining chef. Together, they set out to be the best pit-masters. After honing his skills through competitions with his dad for years, McKenna landed in Chicago. Finally in 2010, he opened Lillie’s Q, named after his Grandmother Lillie who taught him the art of southern cooking. His menu offers elevated southern favorites and was named “Best New BBQ restaurant in the Country” by Food & Wine 2011. McKenna also offers his own line of sauces, which will be featured in Mariano’s.</p>
+            </div>
+			<div class="col-md-5 chefCart">
+				<h4>What’s in Charlie’s Cart</h4>
+				<div id="chef" class="chefImageGallery" data-ng-init="tasteMakerName = 'charlieMcKenna'">
+					<span data-model="{ id: '01', title: 'LIllie’s Q Hot Smoky - Best BBQ Sauce on the planet and it’s sold right at Mariano’s!', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '02', title: 'Bone-in Ribeye – My favorite cut and my birthday meal every year', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '03', title: 'Tilapia – I love to cook it with my daughter', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '04', title: 'Cinnamon Life cereal – I’ve loved this one since I was a kid', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '05', title: 'Kit Kat – I love to freeze them and then treat myself when it’s time to indulge', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '06', title: 'Milk - What’s the saying… does a body good!', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '07', title: 'Hagen Daaz Coffee is my favorite ice cream. For sure.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '08', title: 'Avocados – Great for breakfast with salt and hot sauce', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '09', title: 'Extra Cheddar Gold Fish – My daughter’s favorite snack', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '10', title: 'Johnsonville Brats – Just a great summertime quick weekday meal', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+				</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col-md-4 restaurants">
+					<h4>Charlie's restaurant</h4>
+                    <a href="http://lqchickenshack.com/" target="_blank">
+						<img alt="ChickenShack" data-ng-src="{{getContentUrl('/images/charlieMcKenna/ChickenShack.png')}}" />
+						<h5>Lillie's Q Chicken Shack</h5>
+                    </a>
+                </div>
+                <div class="col-md-4 restaurants">
+					<h4>Charlie's restaurant</h4>
+                    <a href="https://www.lilliesq.com/restaurants/" target="_blank">
+						<img alt="Lillies" data-ng-src="{{getContentUrl('/images/charlieMcKenna/Lillies.png')}}" />
+						<h5>Lillie’s Q</h5>
+                    </a>
+                </div>
+                <div class="col-md-4 chefRecipe">
+                    <a href="recipe?id=72057">
+                        <img alt="recipeIcon" data-ng-src="{{getContentUrl('/images/charlieMcKenna/recipeIcon.png')}}" />
+                        <h5>mac &amp; cheese <br/>by charlie mckenna</h5>
+                    </a>
+                </div>
+
+                <div class="divider"></div>
+                <div class="row host" data-ng-include="getContentUrl('/views/custom/host.html')"></div>
+            </div> 
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 side pull-left">
+            <div data-ng-include="getContentUrl('/views/tasteSidebar.html')"></div>
+        </div>
+    </div>    
+</div>
+

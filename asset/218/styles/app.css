@@ -344,10 +344,13 @@
 }
 
 .chef.zimmerman .restaurants,
-.chef.zimmerman .chefRecipe{
+.chef.zimmerman .chefRecipe,
+.chef.flex .restaurants,
+.chef.flex .chefRecipe{
 	text-align: center;
 }
-.chef.zimmerman .chefRecipe img{
+.chef.zimmerman .chefRecipe img,
+.chef.flex .chefRecipe img{
 	  margin-left: auto;
 }
 
@@ -362,18 +365,21 @@
 }
 
 .chef.izard .chefCart h4,
-.chef.zimmerman .chefCart h4{
+.chef.zimmerman .chefCart h4,
+.chef.flex .chefCart h4{
   text-align: center;
 }
 
 @media (min-width: 992px){
 	.chef.izard .chefCart h4 ,
-	.chef.zimmerman .chefCart h4{
+	.chef.zimmerman .chefCart h4,
+	.chef.flex .chefCart h4{
 	    margin-top: -30px;
 	}
 }
 .chef.izard .chefCart .chefImageGallery,
-.chef.zimmerman .chefCart .chefImageGallery{
+.chef.zimmerman .chefCart .chefImageGallery,
+.chef.flex .chefCart .chefImageGallery{
   padding-left: 10px;
 }
 
