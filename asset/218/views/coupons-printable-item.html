@@ -4,8 +4,8 @@
       <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
     </div>
     <div class="digital" gsn-coupon-popover=""  popover-html="<h5 class='text-uppercase'>{{item.Description1}}</h5><p>{{item.Description2}}</p>">
-      <h5 class="text-uppercase">{{item.Description1}}</h5>      
-      <p>{{item.Description2}}</p>
+      <h5 class="text-uppercase" data-ng-bind-html="item.Description1"></h5>      
+      <p data-ng-bind-html="item.Description2"></p>
     </div>
   </div>
   <div class="row buttons">

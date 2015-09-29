@@ -33,8 +33,7 @@
         <div id="map_canvas" data-ui-map="myMap" class="map-container gMap" data-ui-options="mapOptions" style="height: 280px;"></div>
         <div class="infoMarker" data-ui-map-info-window="myInfoWindow">
           <div data-ng-show="currentMarker.location">
-            <!--<strong>{{currentMarker.location.StoreName}}</strong><br />-->
-			<strong data-ng-bind-html="currentMarker.location.StoreName"></strong><br />
+			      <strong data-ng-bind-html="currentMarker.location.StoreName"></strong><br />
             <address>
               {{currentMarker.location.PrimaryAddress}}<br />
               {{currentMarker.location.City}}, {{currentMarker.location.StateName}} {{currentMarker.location.PostalCode}}  
