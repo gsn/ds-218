@@ -1,14 +1,24 @@
 ﻿<div class="modal-content">
-	<div class="modal-header">
-	  <h3 class="modal-title">Printing Coupons</h3>
-	</div>
-	<div class="modal-body">
-  		<p ng-show="printer.total > 0">
-	    {{printer.total}} coupons will be sent to the default printer
-	  </p>  
-	</div>
-	<div class="modal-footer">
-	  <button class="btn btnMarianos" ng-click="printClippedCoupons()">OK</button>
-	  <button class="btn btnMarianos" ng-click="closeModal()">Cancel</button>
-	</div>
+<div class="modal-header">
+  <h3 class="modal-title">Printing Coupons</h3>
+</div>
+<div class="modal-body">
+  <p ng-show="printer.total > 0">
+    {{printer.total}} coupons will be sent to the default printer
+	<br />
+	<br />
+	<br />
+	<p style="font-size: 9pt; color: gray;">
+		Coupon printing is supported on: Windows 7 and newer operating systems running: Internet Explorer 8+, Firefox, Chrome and Safari.
+		Macintosh OS X 10.6+ running Safari, Firefox or Chrome.
+		<br />
+		<br />
+		Coupon Printing is NOT supported on: Virtual Machines, Saving as PDF, or xps, etc.
+	</p>
+  </p>  
+</div>
+<div class="modal-footer">
+  <button class="btn btnMarianos" ng-click="printClippedCoupons()">OK</button>
+  <button class="btn btnMarianos" ng-click="closeModal()">Cancel</button>
+</div>
 </div>
