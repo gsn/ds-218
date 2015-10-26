@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-md-2 sidebar">
+        <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+    </div>
+   <div class="col-md-10 featuredTasteMaker" data-ng-init="item = {src: 'http://www.youtube.com/embed/mXx2se6wDtM?html5=1'}">
+        <a href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/modal-video.html')" data-ng-click="showModal()"><img alt="Sarah Grueneberg" class="tasteMakerImage" data-ng-src="{{getContentUrl('/images/sarahGrueneberg/header.jpg')}}" /></a>
+    </div>
+</div>
+<div class="clearfix"> 
+    <div class="row chef flex">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main pull-right">
+            <div class="col-md-7 chefInfo">
+				<p>Raised in Houston, based in Chicago and thoroughly inspired by Italy, “Top Chef” finalist Sarah Grueneberg is about to open Monteverde, a modern Italian restaurant at 1020 W. Madison.</p>
+				<p>&nbsp;</p>
+				<p>A 15-year industry veteran, Sarah’s career has been punctuated with experiences that sculpted her culinary approach; most recently, she served as executive chef of the acclaimed Italian restaurant Spiaggia under chef/partner Tony Mantuano.</p>
+				<p>&nbsp;</p>
+				<p>She moved to Chicago from her native Houston in 2005 to accept a line cook position, and over a five-year period came to helm the Michelin-starred kitchen, earning accolades throughout her tenure. A defining period in her career, Sarah credits Spiaggia with nurturing her love of Italian cuisine and culture, and she tours and trains throughout Italy’s rich culinary regions as often as possible.</p>
+				<p>&nbsp;</p>
+				<p>In 2011, Sarah’s talent gained international acclaim through Bravo’s reality show, “Top Chef: Texas,” where she finished as a finalist. She also appeared as an all-star aboard “Top Chef At Sea,” traveling through France and the Iberian Peninsula. After earning her Associate’s Degree in Culinary Arts from the Art Institute of Houston in 2001, Sarah’s first taste of kitchen life came when she served as a line cook at the iconic Brennan’s of Houston. She became the restaurant’s youngest-ever sous chef at age 22. Monteverde is Sarah’s first restaurant, which she co-owns with business partner Meg Sahs.</p>
+            </div>
+			<div class="col-md-5 chefCart">
+				<h4>What’s in Sarah’s Cart</h4>
+				<div id="chef" class="chefImageGallery" data-ng-init="tasteMakerName = 'sarahGrueneberg'">
+					<span data-model="{ id: '01', title: 'Nduja Artisans ‘Nduja – ‘Nduja is a spreadable salumi originally from Calabria but handmade right here in Chicago by a Father and Son team. It’s one of my favorite snacks.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '02', title: 'Caponi Pasta Tagliatelle or Tagliolini - Dried pastas can be daunting, but Caponi pasta is one of the best out there.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '03', title: 'Home Run Inn Pizza,  Sausage and Pepperoni. I usually don’t eat frozen pizza, but HRI does it right, especially the crust. And it’s made in Chicago.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '04', title: 'De Carlo Sun-Dried Tomatoes - These EVOO cured tomatoes are perfect for adding to salads, pasta and pizzas. So much flavor in these tiny tomatoes.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '05', title: 'Giachi Duomo Extra Virgin Olive Oil - this is a fresh, bright EVOO that is great for salad dressings and finishing grilled or roasted meats and fish, incredibly versatile.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '06', title: 'Acetaia San Giacomo Agro di Mosto Balsamic Vinegar - This vinegar is true balsamic vinegar, all natural, no caramel color added, just a few drops will do.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '07', title: 'Ciabatta Bread - I love to have a ’crostini’ lunch at home. Slice up some ciabatta, toast and eat with any cheeses, sliced meats and veggies you have in your fridge', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '08', title: 'Tootsie Roll Pops - My guilty pleasure! Grape is my favorite flavor.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '09', title: 'Perrier Grapefruit Water - Perrier has more tiny bubbles than most sparkling waters, which makes it that much more refreshing', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '10', title: 'Radicchio - I love this green in any salad, it gives a nice bitterness and balance to the other greens.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '11', title: 'Sheep’s Milk Feta Cheese - I love feta, especially sheep’s milk feta! It has a great tang and richness that can add to almost any dish.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '12', title: 'La Quercia Prosciutto - It’s salty, It’s sweet....Hands down the best prosciutto made in the USA! ', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+				</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col-md-6 restaurants">
+					<h4>Sarah's restaurant</h4>
+                    <a href="http://monteverdechicago.com/" target="_blank">
+						<img alt="Monteverde" data-ng-src="{{getContentUrl('/images/sarahGrueneberg/monteverdeLogo.png')}}" />
+						<h5>Monteverde <br>Restaurant &amp; Pastificio</h5>
+                    </a>
+                </div>
+                <div class="col-md-6 chefRecipe">
+                    <a href="recipe?id=72092">
+                        <img alt="recipeIcon" data-ng-src="{{getContentUrl('/images/sarahGrueneberg/recipeIcon.png')}}" />
+                        <h5>Tagliatelle and Zucchini noodles with Salsa Cruda <br/>By Sarah Gruenberg of Monteverde Restaurant</h5>
+                    </a>
+                </div>
+
+                <div class="divider"></div>
+                <div class="row host" data-ng-include="getContentUrl('/views/custom/host.html')"></div>
+            </div> 
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 side pull-left">
+            <div data-ng-include="getContentUrl('/views/tasteSidebar.html')"></div>
+        </div>
+    </div>    
+</div>
+
