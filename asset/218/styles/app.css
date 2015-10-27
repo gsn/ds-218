@@ -673,6 +673,10 @@
   {
     width: 654px;
   }
+  .imgwidth-auto img
+  {
+    width: auto;
+  }
 
 /*---------- Footer ----------*/
 .footer h3 {
