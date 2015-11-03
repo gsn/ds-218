@@ -1500,6 +1500,7 @@ td.nutr-border {
   padding-bottom: 2pt;
   font-family: Arial;
   font-size: 0.85em;
+  text-transform: lowercase;
 }
 
 /*---------- Community ----------*/
