@@ -3,7 +3,7 @@
     <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
   </div>
   <div class="col-md-10 featuredContent" data-gsn-partial="Home"> 
-    <div data-gsn-carousel=""class="carousel slide" data-interval="5000" data-slides="partialContents" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0">
+    <div data-gsn-carousel=""class="carousel slide" data-interval="20000" data-slides="partialContents" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0">
       <!-- Wrapper for slides -->
       <div class="slide-container" data-ng-swipe-left="next()" data-ng-swipe-right="prev()">
         <div data-ng-repeat="item in slides | pagingFilter:1:currentIndex()" data-ng-bind-html="item.Description | trustedHtml" class="slide"></div>
