@@ -17,7 +17,7 @@
 			
 			initUrl(attrs);			
 						
-			$scope.$on('gsnevent:store-persisted', function (evt, store) {
+			scope.$on('gsnevent:store-persisted', function (evt, store) {
 				changeUrl(attrs, store);
 			});
 		}, 5);		
