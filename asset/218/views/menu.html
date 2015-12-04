@@ -15,7 +15,7 @@
       </div>
     </li>
     <li data-ng-repeat="menu in siteMenu | orderBy:'Position'" class="dropdown" dropdown itemprop="name">
-      <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="menu.Name | trustedHtml"></span></a>
+      <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}" gsn-roundy-events="gsnRoundyEvents"><span data-ng-bind-html="menu.Name | trustedHtml"></span></a>
       <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-ng-if="menu.Path == '#' || menu.Path == ''" itemprop="name"><span data-ng-bind-html="menu.Name | trustedHtml"></span> <i class="fa fa-caret-down pull-right"></i>
       </a>
       <ul class="dropdown-menu" data-ng-if="menu.Path == '#'" >
