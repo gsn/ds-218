@@ -15,21 +15,21 @@
 			if(attrs.href != '/events')
 				return;
 			
-			initUrl(attrs);			
+			changeUrl(attrs);			
 						
-			scope.$on('gsnevent:store-persisted', function (evt, store) {
-				changeUrl(attrs, store);
+			scope.$on('gsnevent:store-setid', function (evt, store) {
+				changeUrl(attrs);
 			});
 		}, 5);		
     }
 
-	function initUrl(attrs) {
+	function changeUrl(attrs) {
 		gsnStore.getStore().then(function (store) {
-			changeUrl(attrs, store);
+			updateUrl(attrs, store);
 		});
 	}
 	
-	function changeUrl(attrs, store) {
+	function updateUrl(attrs, store) {
 		var redirectTo, target;
 		if(store.Redirect.indexOf("http") > -1) {
 			redirectTo = store.Redirect;
