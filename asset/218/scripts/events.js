@@ -25,7 +25,13 @@
 
 	function changeUrl(attrs) {
 		gsnStore.getStore().then(function (store) {
-			updateUrl(attrs, store);
+			if(!store) {
+				attrs.$set('href', '/storelocator');
+				attrs.$set('target', '');
+			}
+			else {
+				updateUrl(attrs, store);
+			}
 		});
 	}
 	
