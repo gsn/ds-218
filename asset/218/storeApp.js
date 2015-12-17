@@ -66,6 +66,12 @@
             layout: gsn.getContentUrl('/views/layout-empty.html'),
             caseInsensitiveMatch: true
           })
+          .when('/events', {
+            templateUrl: gsn.getThemeUrl('/views/empty.html'),
+            storeRequired: true,
+            caseInsensitiveMatch: true,
+			controller: 'EventsController'
+          })
           .when('/mealplannerfull', {
             templateUrl: gsn.getContentUrl('/views/meal-planner.html'),
             caseInsensitiveMatch: true
@@ -279,6 +285,20 @@
           });
       //#endregion
     }]);
+
+// EventsController
+
+storeApp.controller('EventsController', ['$scope', 'gsnApi', '$timeout', 'gsnStore', function ($scope, gsnApi, $timeout, gsnStore) {
+	$timeout(function() {
+		gsnStore.getStore().then(function (store) {
+			if(!store) {
+				// this should never happen
+				return;
+			}
+			gsnApi.goUrl(store.Redirect, '_reload');
+		});
+	}, 50);
+});
 
 // ContactUsCtrl
 storeApp.controller('ContactUsCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$timeout', 'gsnStore', '$interpolate', '$http', function ($scope, gsnProfile, gsnApi, $timeout, gsnStore, $interpolate, $http) {
