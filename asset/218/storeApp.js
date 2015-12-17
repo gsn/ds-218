@@ -298,7 +298,7 @@ storeApp.controller('EventsController', ['$scope', 'gsnApi', '$timeout', 'gsnSto
 			gsnApi.goUrl(store.Redirect, '_reload');
 		});
 	}, 50);
-});
+}]);
 
 // ContactUsCtrl
 storeApp.controller('ContactUsCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$timeout', 'gsnStore', '$interpolate', '$http', function ($scope, gsnProfile, gsnApi, $timeout, gsnStore, $interpolate, $http) {
