@@ -189,6 +189,10 @@
             templateUrl: gsn.getContentUrl('/views/custom/mckenna.html'),
             caseInsensitiveMatch: true
           })
+          .when('/lampley', {
+            templateUrl: gsn.getContentUrl('/views/custom/lampley.html'),
+            caseInsensitiveMatch: true
+          })
           .when('/aubin', {
             templateUrl: gsn.getContentUrl('/views/custom/aubin.html'),
             caseInsensitiveMatch: true
