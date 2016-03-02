@@ -1,4 +1,4 @@
-﻿<div class="savingsInfo" ng-class="{greyed:isOnClippedList(item)}">
+﻿﻿<div class="savingsInfo" ng-class="{'greyed': isOnClippedList(item), 'featured': item.IsFeatured}">
 <div class="row">
     <div class="imageContainer">
       <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" alt="{{item.Description1}}" />

@@ -1415,6 +1415,20 @@ margin-left: -120px;
 padding-right: 5px;
 }
 
+.featured {
+    background-image: url('../images/featuredBg.png');
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.featured p {
+    color: #fff;
+}
+
+.featured > .expirationDate > p {
+    color: #000;
+}
+
 .shortDescription {
   float: left;
   clear: both;
