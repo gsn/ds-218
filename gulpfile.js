@@ -66,7 +66,7 @@ function createChainTask(chain) {
   // create clone tasks
   gulp.task('clone-ds-' + chain, function(cb) {
     if (!fs.existsSync('./git_components/ds-' + chain )) {
-      var arg = 'clone -b ' + config.branch + ' https://github.com/gsn/ds-' + chain + '.git git_components/ds-' + chain;
+      var arg = 'clone -b ' + 'master' + ' https://github.com/gsn/ds-' + chain + '.git git_components/ds-' + chain;
       // console.log(arg)
       return git.exec({args:arg }, function (err, stdout) {
         if (err) throw err;
@@ -75,7 +75,7 @@ function createChainTask(chain) {
       })
     }
     else {
-      var arg = 'git fetch && git merge --ff-only origin/' + config.branch;
+      var arg = 'git fetch && git merge --ff-only origin/' + 'master';
       exec(arg, { cwd: process.cwd() + '/git_components/ds-' + chain },
           function (error, stdout, stderr) {
             if (stdout.indexOf('up-to-date') < 0 || !fs.existsSync('./asset/' + chain)) {

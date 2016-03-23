@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-md-2 sidebar">
+        <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+    </div>
+   <div class="col-md-10 featuredTasteMaker">
+      <img alt="Mauro Mafrici" class="tasteMakerImage" data-ng-src="{{getContentUrl('/images/mauroMafrici/header.jpg')}}" />
+    </div>
+</div>
+<div class="clearfix"> 
+    <div class="row chef flex">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main pull-right">
+            <div class="col-md-7 chefInfo">
+				<p>Mauro Mafrici is a Michelin starred Italian chef who has worked in some of the greatest international kitchens and luxury resort hotels of the world. His long resume of prestigious experiences in revered establishments led to the opening of his own critically acclaimed restaurant, Lo Scalco, in New York City which earned a Michelin star in its first year open. Mauro has now brought his talents to Chicago with PELAGO.</p>
+				<p>&nbsp;</p>
+				<p>The basis of Mauro’s cuisine is ‘sapori veri’: true, honest, genuine flavors used masterfully to create new sensations, forms and colors. Fresh seasonal ingredients from Italian and local sources will tantalize every taste bud as Mauro allows each bite to speak for itself in a clean, straightforward flavorful vocabulary. With each endeavor Mauro continues to look for new ways to incorporate regional Italian ingredients as he redefines Italian cuisine.</p>
+				<p>&nbsp;</p>
+				<p>*Quotes for cart items, Pelago logo and recipes for photographed dishes are attached. Please note, Chef Mauro also included a recipe for Risotto al Pomodoro, which is made with the ingredients he selected as his cart items.</p>				
+            </div>
+			<div class="col-md-5 chefCart">
+				<h4>What’s in Mauro’s Cart</h4>
+				<div id="chef" class="chefImageGallery" data-ng-init="tasteMakerName = 'mauroMafrici'">
+					<span data-model="{ id: '01', title: 'Riso Carnaroli Icori - Great for risotto because of its abundance of starch and its long grain.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '02', title: 'Academia Barilla Riviera Ligure - For me the most digestible and gentle and does not cover the taste of food. Zero acidity.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '03', title: 'Pomi - Very easy to make any sauce or to add to any preparation that requires tomato. My mom always has it in her kitchen.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '04', title: 'Spaghetti Barilla Gluten Free - Many customers ask me and I truly believe in this moment it is the best GF spaghetti in the market.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '05', title: 'Flott Solid Tuna From Sicily - The real taste of Italian tuna in oil. One of my favorite snacks.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '06', title: 'White Truffle Butter From San Pietro A Pettine - By San Pietro a Pettine’s friends a rich product to add to all the dishes you would like to taste truffle.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>
+					<span data-model="{ id: '07', title: 'Mutti Cherry Tomato - The best tomatoes in a can. Great flavor and intense color', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '08', title: 'Delitia Butter Of Parma - From Emilia Romagna where is the best Italian milk. So creamy.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '09', title: 'Amarena Cherry Fabbri - My favorite garnish for gelato and whipped cream.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '10', title: 'Di Carlo Cerignola Olive - My first choice to entertain my guests at home.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '11', title: 'Udis Gluten Free Bread - My favorite since I am celiac. I also serve it at Pelago when they request Gluten Free.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+					<span data-model="{ id: '12', title: 'Contes - Gluten Free Ravioli. With butter and sage anytime.', name: tasteMakerName }" data-ng-include="getContentUrl('/views/custom/gallery-item.html')" data-gsn-watch="" ></span>  
+				</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row" >
+                <div class="chefRecipe restaurants" style="text-align: center;padding-bottom: 10px;">
+					<h4>Mauro's restaurant</h4>
+                    <a href="http://www.pelagorestaurant.com/" target="_blank">
+						<img alt="Pelago" data-ng-src="{{getContentUrl('/images/mauroMafrici/pelagoLogo.jpg')}}" />
+						<h5>Pelago <br>Ristorante</h5>
+                    </a>
+                </div>
+            </div>
+             <div class="divider"></div>
+            <div class="row">
+                <div class="col-md-4 chefRecipe imgwidth-auto">
+                    <a href="recipe?id=72190">
+                        <img alt="recipeIcon" data-ng-src="{{getContentUrl('/images/mauroMafrici/recipelogo.jpg')}}" />
+                        <h5>risotto al pomodoro “alessandra favorito”</h5>
+                    </a>
+                </div>
+                <div class="col-md-4 chefRecipe imgwidth-auto">
+                    <a href="recipe?id=72191">
+                        <img alt="recipeIcon" data-ng-src="{{getContentUrl('/images/mauroMafrici/branzino.jpg')}}" />
+                        <h5>Baked Whole Branzino With New Potatoes, Onions, Tomatoes &amp; Aromatic Herbs</h5>
+                    </a>
+                </div>
+                <div class="col-md-4 chefRecipe imgwidth-auto">
+                    <a href="recipe?id=72192">
+                        <img alt="recipeIcon" data-ng-src="{{getContentUrl('/images/mauroMafrici/taralli.jpg')}}" />
+                        <h5>Taralli with Sausage and Green Peas</h5>
+                    </a>
+                </div>
+
+                <div class="divider"></div>
+                <div class="row host" data-ng-include="getContentUrl('/views/custom/host.html')"></div>
+            </div> 
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 side pull-left">
+            <div data-ng-include="getContentUrl('/views/tasteSidebar.html')"></div>
+        </div>
+    </div>    
+</div>
+
