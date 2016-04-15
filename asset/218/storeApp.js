@@ -33,10 +33,6 @@
             storeRequired: true,
             caseInsensitiveMatch: true
           })
-          .when('/community', {
-            templateUrl: gsn.getContentUrl('/views/custom/community.html'),
-            caseInsensitiveMatch: true
-          })
           .when('/contactus', {
             templateUrl: gsn.getContentUrl('/views/contact-us.html'),
             controller: 'ContactUsCtrl',
