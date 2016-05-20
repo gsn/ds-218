@@ -287,6 +287,16 @@
             controller: 'StaticContentCtrl',
             caseInsensitiveMatch: true
           });
+		
+		//Task #1373
+		var eventUrlsToRedirect = ['/bucktown', '/westloop', '/bridgeport', '/arlingtonheights', '/aurora', '/buffalogrove', '/edgewater', '/elmhurst', '/evergreenpark', '/frankfort', '/glenvieweast', '/glenviewwest', '/gurnee', '/harwoodheights', '/jeffersonpark', '/lakeshoreeast', '/lakezurich', '/newcity', '/northbrook', '/northfield', '/oaklawn', '/parkridge', '/ravenswood', '/roscoevillage', '/shorewood', '/skokie', '/southloop', '/ukrainianvillage', '/vernonhills', '/westernsprings', '/wheaton'];
+		angular.forEach(eventUrlsToRedirect, function(url) {
+			$routeProvider.when(url, {
+				redirectTo: function(routeParams) {
+					window.location = 'http://www.marianos.eventbrite.com';
+				}
+			  });
+		});
       //#endregion
     }]);
 
