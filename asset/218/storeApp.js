@@ -193,6 +193,10 @@
             templateUrl: gsn.getContentUrl('/views/custom/mafrici.html'),
             caseInsensitiveMatch: true
           })
+          .when('/aldoandcameron', {
+            templateUrl: gsn.getContentUrl('/views/custom/aldoandcameron.html'),
+            caseInsensitiveMatch: true
+          })
           .when('/aubin', {
             templateUrl: gsn.getContentUrl('/views/custom/aubin.html'),
             caseInsensitiveMatch: true
