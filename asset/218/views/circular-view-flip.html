@@ -1,0 +1,67 @@
+<div id="flipp-container"></div>
+<script>
+    // Initialize Hosted Circular
+    var flippContainerId = 'flipp-container';
+
+    function doLoad() {
+        wishabi.hostedservices.iframe.decorate(
+            flippContainerId,
+            'marianos',
+            wishabi.hostedservices.iframe.Sizing.PAGE,
+            {
+                minHeight: 600,
+                initialHeight: 600,
+                extraPadding: 0,
+                // auto_locate will auto locate the person based on IP
+                // store_code is the store number passed through to us that needs to be passed to the iframe. 8501 is a example store we placed in the parameter as an example.
+                queryParameters: 'auto_locate=true&store_code=8501'
+            }
+        );
+
+        // Define Flipp API configuration parameters
+        var flippDomain = 'http://www.circularhub.com';
+        var flippIframe = document.getElementById(flippContainerId).getElementsByTagName('iframe')[0];
+
+        // Define Shopping List event handlers
+        var flippShoppingListDelegate = {
+            handleItemAddedClicked: function(flippShoppingList, itemId, item) {
+                window.console.log('Shopping List: Adding item ' + itemId);
+                window.console.log(item);
+                flippShoppingList.addItem(itemId);
+            },
+            handleItemRemovedClicked: function(flippShoppingList, itemId, item) {
+                window.console.log('Shopping List: Removing item ' + itemId);
+                window.console.log(item);
+                flippShoppingList.removeItem(itemId);
+            },
+            handleShoppingListOpen: function(flippShoppingList) {
+                window.console.log('Shopping List: Open Shopping List');
+            }
+        };
+
+        // Initialize Shopping List API and register event handlers
+        var flippShoppingList = new wishabi.hostedservices.iframe.ShoppingList(
+            window, flippIframe.contentWindow, flippShoppingListDelegate, flippDomain
+        );
+
+        // Define function to initialize user state in Flipp Iframe
+        var initFlippUserState = function() {
+            flippShoppingList.setItems([100000000, 100000001]);
+        };
+
+        // Initialize user state once Flipp Iframe has loaded
+        if (window.addEventListener) {
+            flippIframe.addEventListener('load', initFlippUserState);
+        } else if (window.attachEvent) {
+            // Legacy Internet Explorer event listener
+            flippIframe.attachEvent('onreadystatechange', function() {
+                if ('complete' === flippIframe.readyState) {
+                    initFlippUserState();
+                }
+            });
+        }
+    }
+
+    gsn.loadScripts(['http://www.circularhub.com/hosted_services/js/1.7.0/wishabi.js'
+        ,'http://www.circularhub.com/hosted_services/iframe.js'], doLoad);
+</script>

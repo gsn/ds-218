@@ -33,6 +33,11 @@
             storeRequired: true,
             caseInsensitiveMatch: true
           })
+          .when('/circular/flip', {
+            templateUrl: gsn.getThemeUrl('/views/circular-view2.html'),
+            storeRequired: true,
+            caseInsensitiveMatch: true
+          })
           .when('/contactus', {
             templateUrl: gsn.getContentUrl('/views/contact-us.html'),
             controller: 'ContactUsCtrl',

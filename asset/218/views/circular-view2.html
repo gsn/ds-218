@@ -1,0 +1,17 @@
+<div class="hidden-meta" data-gsn-title="{{ChainName}} circulars"></div>
+<div class="row" data-ctrl-circular="">
+  <div class="col-md-2 sidebar" data-ng-init="loadAll = (currentPath.indexOf('text') > 0)">
+    <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
+    <div class="row navAd" data-gsn-ad-unit="10"></div>
+  </div>
+  <div class="col-md-10 rightContent">
+    <div class="row topPod" data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>  
+    
+<!-- Begin Flipp integration -->
+<!-- NOTE: wishabi.js must be loaded before iframe.js -->
+<div data-ng-include="getContentUrl('/views/circular-view-flip.html')"></div>
+<!-- End Flipp integration -->
+
+  </div>
+</div>
+<div class="end"></div>
