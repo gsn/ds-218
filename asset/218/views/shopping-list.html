@@ -37,11 +37,13 @@
                 </div>
 				<div style="padding-left: 60px;">
 					<span data-ng-if="item.IsCoupon">
-					  <img data-ng-src="{{getContentUrl('/images/eClipsicon.png')}}" data-ng-show="item.ItemTypeId == 13">
+					  <img data-ng-src="{{getContentUrl('/images/eClipsIcon.png')}}" data-ng-show="item.ItemTypeId == 13">
 					  <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.ItemTypeId == 2">
 					  {{item.PriceString}}
 					</span>
 					<span data-ng-bind-html="item.Description"></span>
+					<div data-ng-show="item.ItemTypeId == 13" >{{item.Description2}}</div>
+					<div data-ng-show="item.ItemTypeId == 13" >expires: {{item.EndDate | date: 'M / dd / yyyy'}}</div>
 					<div data-ng-hide="item.IsCoupon" class="price">{{item.PriceString}}</div>
 					<div data-ng-show="item.ItemTypeId == 13">Redeemable one time only.</div>
 					<input style="height: 20px;" placeholder="Comment" data-ng-hide="item.IsCoupon" data-ng-model="item.Comment" ui-keypress="{13:'doUpdateQuantity(item)'}" />  

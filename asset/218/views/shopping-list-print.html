@@ -23,9 +23,11 @@
         <div class="circular-item" data-ng-repeat="item in groupItem.fitems">
           <div class="pull-right">{{item.Quantity}}</div>
           <div>
-            <img data-ng-src="{{getContentUrl('/images/eClipsicon.png')}}" data-ng-show="item.ItemTypeId == 13">
+		  <img data-ng-src="{{item.SmallImageUrl || getContentUrl('/images/no_image.jpg')}}" style="max-width: 40px; max-height: 50px" />
+            <img data-ng-src="{{getContentUrl('/images/eClipsIcon.png')}}" data-ng-show="item.ItemTypeId == 13">
             <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.ItemTypeId == 2">
             <span data-ng-bind-html="item.Description"></span>
+			<div data-ng-show="item.ItemTypeId == 13" >{{item.Description2}}</div>
             <p data-ng-show="item.ItemTypeId == 13">Redeemable one time only.</p>
           </div>
           <span style="font-size: x-small;padding-left: 10px;" data-ng-show="item.Comment">({{item.Comment}})</span>
