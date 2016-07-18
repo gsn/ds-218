@@ -2686,11 +2686,6 @@ legend {
     padding-left: 6px;
   }
 
-  .itemInfo > div.circular-item > div:nth-child(2)
-  {
-    max-height: 38px;
-    overflow: hidden;
-  }
   html, body, .layout-container {
     height: 99%;/*avoids extra blank page while printing*/
   }
