@@ -209,6 +209,16 @@
 .amenities.marianos-sweetShop { background-position: 0 -444px; } 
 .amenities.marianos-vero { background-position: 0 -481px; } 
 .amenities.marianos-wineBar { background-position: 0 -518px; } 
+.amenities.marianos-chicagosfourstarburgerbar { background-image: url('/asset/218/images/icons/chicagosfourstarburgerbar.png'); } 
+.amenities.marianos-gemvinesaladco { background-image: url('/asset/218/images/icons/gemvinesaladco.png'); }
+.amenities.marianos-guacamolebar{ background-image: url('/asset/218/images/icons/guacamolebar.png'); }
+.amenities.marianos-hotfoods { background-image: url('/asset/218/images/icons/hotfoods.png'); }
+.amenities.marianos-hotpizza { background-image: url('/asset/218/images/icons/hotpizza.png'); }
+.amenities.marianos-lakeviewurbanpastabar { background-image: url('/asset/218/images/icons/lakeviewurbanpastabar.png'); }
+.amenities.marianos-nutellabar { background-image: url('/asset/218/images/icons/nutellabar.png'); }
+.amenities.marianos-sandwichshop { background-image: url('/asset/218/images/icons/sandwichshop.png'); }
+.amenities.marianos-signaturefineteas { background-image: url('/asset/218/images/icons/signaturefineteas.png'); }
+
 
 .storeName {
   color: #ffffff;
