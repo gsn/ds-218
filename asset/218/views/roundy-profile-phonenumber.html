@@ -1,10 +1,10 @@
-﻿<form role="form" class="form-horizontal" name="myPhoneForm" data-ng-submit="save()">
+<form role="form" class="form-horizontal" name="myPhoneForm" data-ng-submit="save()">
   <div class="modal-header">
-    <h3 class="modal-title">Change Phone Number</h3>
+    <h3 class="modal-title">Change Alternate ID</h3>
   </div>
   <div class="modal-body">
     <div class="row">
-      This is the phone number tied to your Mariano's card. You can enter this number at checkout (instead of scanning your card) to activate your Mariano's account. You may use any phone number that is currently not used by someone else.
+      This is the 10 digit Alternate ID tied to your Fresh Perks card. You can enter number at checkout(Instead of Scanning your card) to activate your Fresh Preks account. You may use any Alternate ID that is not currently used by someone else. We suggest using a number that is eady to remember such as your phone number.
     </div> 
     <div class="row">
        <div class="col-md-10 col-md-offset-1 alert alert-danger" data-ng-show="validateErrorMessage">
@@ -14,16 +14,16 @@
     </div>  
     <div class="form-group" style="margin-top: 15px;" data-ng-class="{'has-success': input.PhoneNumber.length==10, 'has-error':input.PhoneNumber.length<10 && input.PhoneNumber.length!=0 }">
       <div class="col-md-3" style="font-weight: 700; margin-top: 5px;">
-        Phone Number:
+        Alternate ID:
       </div>
       <div class="col-md-7" >        
-         <input type="text" class="form-control" name="phonenumber" data-ng-model="input.PhoneNumber" data-ui-mask="?999-999-9999" />
+         <input type="text" class="form-control" name="phonenumber" data-ng-model="input.PhoneNumber"  />
       </div>      
     </div>
   </div>
   <div class="modal-footer">
     <button class="btn btnMarianos" type="button" data-ng-click="cancel()">Cancel</button>
-    <button class="btn btnMarianos" type="button" data-ng-click="remove()" data-ng-hide="isECard">Remove Phone Number</button>
-    <button class="btn btnMarianos" data-ng-disabled="!myPhoneForm.$valid || input.PhoneNumber.length<10"type="submit">Change Phone Number</button>
+     <button class="btn btnMarianos" type="button" data-ng-click="remove()" data-ng-hide="isECard">Remove Alternate ID</button>
+    <button class="btn btnMarianos" data-ng-disabled="!myPhoneForm.$valid || input.PhoneNumber.length<10"type="submit">Change Alternate ID</button>
   </div>
 </form>

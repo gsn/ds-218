@@ -1,4 +1,4 @@
-﻿<div class="row" data-ctrl-roundy-profile="">
+<div class="row" data-ctrl-roundy-profile="">
   <div style="display: none" data-gsn-modal="getThemeUrl('/views/modal-loading.html')" data-show="isLoading"></div>
   <div class="col-md-2 sidebar">
     <div class="getNav" data-ng-include="getContentUrl('/views/menu.html')"></div>
@@ -45,8 +45,8 @@
               </div>
             </div>
             <div class="row padding-top-sm">
-              <strong class="col-md-4">Phone Number</strong>
-              <p class="col-md-4" >{{profile.Phone | tel}}</p>
+               <strong class="col-md-4">Alternate ID</strong>
+              <p class="col-md-4" >{{profile.Phone}}</p>
               <div class="col-md-4">
                 <button type="button" class="btn btn-xs btnMarianos" data-ng-click="changePhoneNumber()">Change</button></div>
             </div>
@@ -125,5 +125,3 @@
   </div>
 
 </div>
-
-
