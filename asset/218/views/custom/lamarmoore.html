@@ -6,13 +6,13 @@
        <img alt="Lamar Moore" class="tasteMakerImage" data-ng-src="{{getContentUrl('/images/lamarmoore/header.jpg')}}" /></a>
     </div>
 </div>
-<div class="clearfix"> 
+<div class="clearfix">
     <div class="row chef flex">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 main pull-right">
             <div class="col-md-7 chefInfo">
 				<p>Chef Lamar Moore was born and raised in Chicago.  He began showing his love for culinary arts at the age of 8.  Growing up in a large family, Chef Lamar learned the importance of cooking with love, taking care of people, and giving back to those less fortunate. While cooking at his grandmother’s side and he continues to cook from the soul and keep his culinary team happy and evolving in the industry.</p>
 				<br />
-				<p>Chef Lamar has maintained a progressive culinary career with more than 15 years of experience from sports stadiums to restaurants and now hotels.  As an Executive Chef, Lamar is responsible for providing guests with an extraordinary culinary experience.  In addition to the menu development, Chef Lamar coordinates the culinary experiences for various banquet events including weddings, parties, and corporate events.  
+				<p>Chef Lamar has maintained a progressive culinary career with more than 15 years of experience from sports stadiums to restaurants and now hotels.  As an Executive Chef, Lamar is responsible for providing guests with an extraordinary culinary experience.  In addition to the menu development, Chef Lamar coordinates the culinary experiences for various banquet events including weddings, parties, and corporate events.
 				Chef Lamar is a qualified Professional Chef, holding a degree in Culinary Arts from Le Cordon Bleu in Chicago.  He has traveled the world to Europe, Greece, and throughout the United States extending his knowledge and expertise of international cuisine by visiting local markets and restaurants.</p>
 				<br />
 				<p>Chef Lamar has extensive expertise creating dishes in a variety of cuisines ranging from Latin American to Peruvian as well as American and French fine dining.  He takes pride in the relationships he has developed over the years and always does business with local farmers who produce the freshest ingredients.
@@ -23,7 +23,7 @@
 				<br />
 				<p>At home, he enjoys cooking and surfing the web.  When he’s not working, he enjoys social gatherings, going to the gym, snowboarding, and fishing.</p>
 				<br />
-				<p>Chef Lamar Moore’s advice to aspiring chefs:  remember that hard work coupled with sacrifice equals success, and leadership is not a position or title, it is an action and example.</p>							
+				<p>Chef Lamar Moore’s advice to aspiring chefs:  remember that hard work coupled with sacrifice equals success, and leadership is not a position or title, it is an action and example.</p>
             </div>
 			<div class="col-md-5 chefCart">
 				<h4>What’s in Lamar’s Cart</h4>
@@ -62,8 +62,8 @@
                     </a>
 					<h5>The Smoke Daddy</h5>
                 </div>
-            </div> 
-			
+            </div>
+
 			<div class="divider"></div>
             <div class="row">
                 <div class="col-md-4 chefRecipe imgwidth-auto">
@@ -84,68 +84,27 @@
                         <h5>Mexican Street Corn</h5>
                     </a>
                 </div>
-                <script src="http://cdn.gsngrocers.com/script/lib/bootstrap-image-gallery.min.js"></script>                 
-                <link href="//cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.15.2/css/blueimp-gallery.min.css" rel="stylesheet" type="text/css">   
-                <link href="http://cdn.gsngrocers.com/script/lib/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css">        
-
-                <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-                <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" style="overflow: hidden">
-                  <!-- The container for the modal slides -->
-                  <div class="slides"></div>
-                  <!-- Controls for the borderless lightbox -->
-                  <h3 class="title">&nbsp;</h3>
-                  <a class="prev">‹</a>
-                  <a class="next">›</a>
-                  <a class="close">X</a>
-                  <a class="play-pause"></a>
-                  <ol class="indicator"></ol>
-                  <!-- The modal dialog, which will be used to wrap the lightbox content -->
-                  <div class="modal fade">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" aria-hidden="true"></button>
-                          <h4 class="modal-title">&nbsp;</h4>
-                        </div>
-                        <div class="modal-body next">
-
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default pull-left prev">
-                            <i class="glyphicon glyphicon-chevron-left"></i>
-                            Previous
-                          </button>
-                          <button type="button" class="btn btn-primary next">
-                            Next
-                           <i class="glyphicon glyphicon-chevron-right"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  
-            </div> 
+            </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 side pull-left">
             <div data-ng-include="getContentUrl('/views/tasteSidebar.html')"></div>
         </div>
-    </div>    
+    </div>
 </div>
 
 <script>
   $(document).ready(function() {
       console.log("loaded chefs")
-        
+
         $('#chef1 span').live('click',function() {
           var links = [];
             $('#chef1 span').find('img').each(function() {
               //console.log($(this).context.currentSrc);
               links.push($(this).context.currentSrc);
-              
+
           });
         });
-        
+
 
   });
 </script>
