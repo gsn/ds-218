@@ -55,15 +55,6 @@
             <div class="form-group col-md-6" data-ng-class="{'has-success': !MyForm.email.$invalid, 'has-error': MyForm.email.$invalid}">
               <label for="email">Email Address</label>
               <input tabindex=1 class="form-control" type="email" name="email" placeholder="Enter email address" data-ng-model="profile.Email" maxlength="255" data-ng-required="true" data-ng-disabled="loggedInWithFacebook" data-gsn-auto-fill-sync />
-              <div class="checkbox">
-                <div>
-                  <label for="receiveemail"><input type="checkbox" id="receiveemail" name="receiveemail" data-ng-model="profile.ReceiveEmail">
-                  Send me coupons, offers and other communications via email</label><br />
-                  <label for="receivemail"><input type="checkbox" id="receivemail" name="receivemail" data-ng-model="profile.ReceiveMail">
-                  Send me coupons, offers and other communications via mail</label>
-                </div>
-                <p class="pull-right"><a data-ng-href="/privacy">Privacy Policy</a></p>
-              </div>
               <div class="col-md-8 col-md-offset-2">
                 <button type="button" class="btn btnMarianos padding-top-sm " data-ng-click="goUrl('/changepassword')">Change Password</button>
               </div>
@@ -76,6 +67,19 @@
               <select tabindex=2 class="form-control" name="primarystoreid" data-ng-model="profile.PrimaryStoreId" data-ng-options="store.StoreId as store.StoreName for store in stores" data-ng-required="true">
                 <option value="">-- choose a store --</option>
               </select>
+            </div>
+
+            <div class="form-group col-md-12">
+              <div class="checkbox">
+
+                <p class="pull-right"><a class="roundy-account-privacylink" data-ng-href="/privacy">Privacy Policy</a></p>
+                <div class="roundyaccount-email">
+                  <label for="receiveemail"><input type="checkbox" id="receiveemail" name="receiveemail" data-ng-model="profile.ReceiveEmail">
+                  Send me coupons, offers and other communications via email</label><br />
+                  <label for="receivepostalmail"><input type="checkbox" id="receivepostalmail" name="receivepostalmail" data-ng-model="profile.ReceivePostalMail">
+                  Send me coupons, offers and other communications via mail</label>
+                </div>
+              </div>
             </div>
           </div>
           <div class="row padding-top-sm">
