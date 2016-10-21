@@ -51,6 +51,11 @@
                 <button type="button" class="btn btn-xs btnMarianos" data-ng-click="changePhoneNumber()">Change</button></div>
             </div>
           </div>
+          <div class="row padding-top-sm">
+              <div class="col-md-8 col-md-offset-2">
+                <button type="button" class="btn btnMarianos padding-top-sm" data-ng-click="goUrl('/changepassword')">Change Password</button>
+              </div>
+          </div>
           <div class="row padding-top-lg">
             <div class="form-group col-md-6" data-ng-class="{'has-success': !MyForm.email.$invalid, 'has-error': MyForm.email.$invalid}">
               <label for="email">Email Address</label>
@@ -76,10 +81,6 @@
                   <label for="receivepostalmail"><input type="checkbox" id="receivepostalmail" name="receivepostalmail" data-ng-model="profile.ReceivePostalMail">
                   Send me coupons, offers and other communications via mail</label>
                 </div>
-              </div>
-
-              <div class="col-md-8 col-md-offset-2">
-                <button type="button" class="btn btnMarianos padding-top-sm " data-ng-click="goUrl('/changepassword')">Change Password</button>
               </div>
             </div>
           </div>
