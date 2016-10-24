@@ -282,6 +282,10 @@
             templateUrl: gsn.getContentUrl('/views/custom/galdones.html'),
             caseInsensitiveMatch: true
           })
+          .when('/lamarmoore', {
+            templateUrl: gsn.getContentUrl('/views/custom/lamarmoore.html'),
+            caseInsensitiveMatch: true
+          })
 		      .when('/myaccount', {
             templateUrl: gsn.getThemeUrl('/views/roundy-account.html'),
             requireLogin: true,
