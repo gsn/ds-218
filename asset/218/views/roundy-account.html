@@ -121,12 +121,12 @@
               <input tabindex="10" class="form-control" type="text" name="zipcode"  ui-mask="?99999-9999" data-ng-model="profile.PostalCode" data-gsn-auto-fill-sync />
             </div>
           </div>
+          <div class="row">
+              <button type="submit" class="btn btnMarianos pull-right" data-ng-disabled="!MyForm.$valid">Save</button>
+          </div>
         </div>
         <div class="col-md-4">
           <img alt="" data-ng-src="{{getThemeUrl('/images/marianosrewards_back.jpg')}}" />
-        </div>
-        <div class="btnMarianos-outer">
-          <button type="submit" class="btn btnMarianos" data-ng-disabled="!MyForm.$valid">Save</button>
         </div>
       </div>
     </form>
