@@ -50,6 +50,11 @@
               <div class="col-md-4">
                 <button type="button" class="btn btn-xs btnMarianos" data-ng-click="changePhoneNumber()">Change</button></div>
             </div>
+            <div class="row padding-top-sm">
+              <div class="col-md-8 col-md-offset-2">
+                <button type="button" class="btn btnMarianos padding-top-sm" data-ng-click="goUrl('/changepassword')">Change Password</button>
+              </div>
+            </div>
           </div>
           <div class="row padding-top-lg">
             <div class="form-group col-md-6" data-ng-class="{'has-success': !MyForm.email.$invalid, 'has-error': MyForm.email.$invalid}">
@@ -66,11 +71,6 @@
               </select>
             </div>
 
-          <div class="row padding-top-sm">
-              <div class="col-md-8 col-md-offset-2">
-                <button type="button" class="btn btnMarianos padding-top-sm" data-ng-click="goUrl('/changepassword')">Change Password</button>
-              </div>
-          </div>
             <div class="col-md-12">
               <div class="checkbox">
 
