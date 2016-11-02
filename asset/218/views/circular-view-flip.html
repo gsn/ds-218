@@ -1,4 +1,4 @@
-<div id="flipp-container"></div>
+<div id="flipp-container" ng-conroller='myController'></div>
 <script>
     // Initialize Hosted Circular
     var flippContainerId = 'flipp-container';
@@ -25,14 +25,20 @@
         // Define Shopping List event handlers
         var flippShoppingListDelegate = {
             handleItemAddedClicked: function(flippShoppingList, itemId, item) {
-                window.console.log('Shopping List: Adding item ' + itemId);
                 window.console.log(item);
+                window.console.log('Shopping List: Adding item ' + itemId);
+                console.log(flippShoppingList)
                 flippShoppingList.addItem(itemId);
+               //To Add the item to the shopping list - item => Circular Hub response & itemid 
+                angular.element(document.getElementById('flipp-container')).scope().addFlyerItems(item, itemId);
+                
             },
             handleItemRemovedClicked: function(flippShoppingList, itemId, item) {
                 window.console.log('Shopping List: Removing item ' + itemId);
                 window.console.log(item);
                 flippShoppingList.removeItem(itemId);
+               //To Add the item from the shopping list - item => Circular Hub response & itemid 
+                angular.element(document.getElementById('flipp-container')).scope().removeItemFromFlyer(item, itemId);
             },
             handleShoppingListOpen: function(flippShoppingList) {
                 window.console.log('Shopping List: Open Shopping List');
