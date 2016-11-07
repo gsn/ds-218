@@ -1,4 +1,4 @@
-<div id="flipp-container" ng-conroller='myController'></div>
+<div id="flipp-container" ng-conroller='myController' ctrl-roundy-profile></div>
 <script>
     // Initialize Hosted Circular
     var flippContainerId = 'flipp-container';
@@ -27,7 +27,6 @@
             handleItemAddedClicked: function(flippShoppingList, itemId, item) {
                 window.console.log(item);
                 window.console.log('Shopping List: Adding item ' + itemId);
-                console.log(flippShoppingList)
                 flippShoppingList.addItem(itemId);
                //To Add the item to the shopping list - item => Circular Hub response & itemid 
                 angular.element(document.getElementById('flipp-container')).scope().addFlyerItems(item, itemId);
