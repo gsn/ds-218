@@ -4,6 +4,8 @@
     var flippContainerId = 'flipp-container';
 
     function doLoad() {
+        var storeNumber = localStorage.getItem("gsnStorage-storeNumber") || 8501
+        console.log(storeNumber)
         wishabi.hostedservices.iframe.decorate(
             flippContainerId,
             'marianos',
@@ -13,11 +15,11 @@
                 initialHeight: 600,
                 extraPadding: 0,
                 // auto_locate will auto locate the person based on IP
-                // store_code is the store number passed through to us that needs to be passed to the iframe. 8501 is a example store we placed in the parameter as an example.
-                queryParameters: 'auto_locate=true&store_code=8501'
+                // store_code is the store number passed through to us that needs to be passed to the iframe. 8501 is a example store we placed in the parameter as an example. 8539
+                queryParameters: 'auto_locate=true&store_code='+storeNumber
             }
         );
-
+        
         // Define Flipp API configuration parameters
         var flippDomain = 'http://www.circularhub.com';
         var flippIframe = document.getElementById(flippContainerId).getElementsByTagName('iframe')[0];
