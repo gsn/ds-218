@@ -1,7 +1,7 @@
 var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
     .config(['$routeProvider', function ($routeProvider) {
-      var flippFile = '/proxy/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=content flipp&type=text/html&nocache=' + gsn.config.Version;
+      var flippFile = '/proxy/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=content-flipp&type=text/html&nocache=' + gsn.config.Version;
 
       //#region route config
       // storeRequired attribute identify route require a store selection
