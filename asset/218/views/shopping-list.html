@@ -1,4 +1,4 @@
-﻿<div class="hidden" data-gsn-title="{{ChainName}} my shopping list"></div>
+<div class="hidden" data-gsn-title="{{ChainName}} my shopping list"></div>
 <div class="row" data-ctrl-shopping-list="">
   <div class="row" data-gsn-shopping-list="">
     <div class="col-md-2 sidebar">
@@ -15,8 +15,8 @@
             <input class="add-field pull-left" type="text" data-ng-model="addString" placeholder="add item" ui-keypress="{13:'doAddOwnItem()'}" />
             <button class="btn btn-default btn-xs btnMarianosLeft" data-ng-click="doAddOwnItem()">Add</button>
           </div>
-		  <div class="row">
-              <p>
+		      <div class="row">
+              <p data-ng-if="circular.Circulars[0].StartDate">
                 Ad Prices Valid from {{circular.Circulars[0].StartDate | date: 'M/dd/yyyy' }} through {{circular.Circulars[0].EndDate | date: 'M/dd/yyyy' }} at:
               </p>
             <p data-gsn-store-info="[store.StoreName] [store.PrimaryAddress], [store.City] location only"></p>
@@ -42,14 +42,11 @@
 					  {{item.PriceString}}
 					</span>
 					<span data-ng-bind-html="item.Description"></span>
-					<div data-ng-show="item.ItemTypeId == 13" >{{item.Description2}}</div>
+					<div data-ng-show="item.ItemTypeId == 13 || item.ItemTypeId == 0" >{{item.Description2}}</div>
 					<div data-ng-show="item.ItemTypeId == 13" >expires: {{item.EndDate | date: 'M / dd / yyyy'}}</div>
 					<div data-ng-hide="item.IsCoupon" class="price">{{item.PriceString}}</div>
 					<div data-ng-show="item.ItemTypeId == 13">Redeemable one time only.</div>
-					<input style="height: 20px;" placeholder="Comment" data-ng-hide="item.IsCoupon" data-ng-model="item.Comment" ui-keypress="{13:'doUpdateQuantity(item)'}" />  
-					<!-- may need this data from stored procedure
-				  <div class="savings" data-ng-show="item.SavingsString">SAVINGS - {{item.SavingsString}}</div>
-					-->
+					<input style="height: 20px;" placeholder="Comment" data-ng-hide="item.IsCoupon" data-ng-model="item.Comment" ui-keypress="{13:'doUpdateQuantity(item)'}" />
 				</div>
               </div>
 
