@@ -2,9 +2,23 @@
 <script>
     // Initialize Hosted Circular
     var flippContainerId = 'flipp-container';
+    var storeNumber = 8501;
+    var gsnShoppingList = {};
+    gsn.$store.getStore().then(function(rst) {
+      storeNumber = rst.StoreNumber;
+    });
+
+    for (var k in window._tk.trackers) {
+        window._tk.trackers[k].on('track', function(item) {
+          console.log(item);
+          if (item.ItemTypeId == 0) {
+
+          }
+        });
+    }
 
     function doLoad() {
-        var storeNumber = localStorage.getItem("gsnStorage-storeNumber") || 8501
+        // var storeNumber = localStorage.getItem("gsnStorage-storeNumber") || 8501
         console.log(storeNumber)
         wishabi.hostedservices.iframe.decorate(
             flippContainerId,
@@ -19,7 +33,7 @@
                 queryParameters: 'auto_locate=true&store_code='+storeNumber
             }
         );
-        
+
         // Define Flipp API configuration parameters
         var flippDomain = 'http://www.circularhub.com';
         var flippIframe = document.getElementById(flippContainerId).getElementsByTagName('iframe')[0];
@@ -30,15 +44,15 @@
                 window.console.log(item);
                 window.console.log('Shopping List: Adding item ' + itemId);
                 flippShoppingList.addItem(itemId);
-               //To Add the item to the shopping list - item => Circular Hub response & itemid 
+               //To Add the item to the shopping list - item => Circular Hub response & itemid
                 angular.element(document.getElementById('flipp-container')).scope().addFlyerItems(item, itemId);
-                
+
             },
             handleItemRemovedClicked: function(flippShoppingList, itemId, item) {
                 window.console.log('Shopping List: Removing item ' + itemId);
                 window.console.log(item);
                 flippShoppingList.removeItem(itemId);
-               //To Add the item from the shopping list - item => Circular Hub response & itemid 
+               //To Add the item from the shopping list - item => Circular Hub response & itemid
                 angular.element(document.getElementById('flipp-container')).scope().removeItemFromFlyer(item, itemId);
             },
             handleShoppingListOpen: function(flippShoppingList) {
@@ -53,7 +67,17 @@
 
         // Define function to initialize user state in Flipp Iframe
         var initFlippUserState = function() {
-            flippShoppingList.setItems([100000000, 100000001]);
+            var shoppingList = {};
+            var sl = gsn.$profile.getShoppingList();
+
+           var items = [];
+           var allItems = sl.allItems();
+           angular.forEach(allItems, function(item, idx) {
+              if (item.ItemTypeId === 0) {
+                items.push(item.ItemId);
+              }
+           });
+           flippShoppingList.setItems(items);
         };
 
         // Initialize user state once Flipp Iframe has loaded
