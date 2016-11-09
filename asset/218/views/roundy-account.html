@@ -51,7 +51,13 @@
                 <button type="button" class="btn btn-xs btnMarianos" data-ng-click="changePhoneNumber()">Change</button></div>
             </div>
           </div>
-          <div class="row padding-top-lg">
+          <div class="row">
+            <div class="row padding-top-sm" style="padding-bottom: 15px">
+                <div class="row text-center">
+                    <button type="button" class="btn btnMarianos" data-ng-click="goUrl('/changepassword')">Change Password</button>
+                </div>
+            </div>
+
             <div class="form-group col-md-6" data-ng-class="{'has-success': !MyForm.email.$invalid, 'has-error': MyForm.email.$invalid}">
               <label for="email">Email Address</label>
               <input tabindex=1 class="form-control" type="email" name="email" placeholder="Enter email address" data-ng-model="profile.Email" maxlength="255" data-ng-required="true" data-ng-disabled="loggedInWithFacebook" data-gsn-auto-fill-sync />
@@ -66,11 +72,6 @@
               </select>
             </div>
 
-          <div class="row padding-top-sm">
-              <div class="col-md-8 col-md-offset-2">
-                <button type="button" class="btn btnMarianos padding-top-sm" data-ng-click="goUrl('/changepassword')">Change Password</button>
-              </div>
-          </div>
             <div class="col-md-12">
               <div class="checkbox">
 
@@ -121,12 +122,12 @@
               <input tabindex="10" class="form-control" type="text" name="zipcode"  ui-mask="?99999-9999" data-ng-model="profile.PostalCode" data-gsn-auto-fill-sync />
             </div>
           </div>
+          <div class="row">
+              <button type="submit" class="btn btnMarianos pull-right" data-ng-disabled="!MyForm.$valid" style="width: 150px">Save</button>
+          </div>
         </div>
         <div class="col-md-4">
           <img alt="" data-ng-src="{{getThemeUrl('/images/marianosrewards_back.jpg')}}" />
-        </div>
-        <div class="btnMarianos-outer">
-          <button type="submit" class="btn btnMarianos" data-ng-disabled="!MyForm.$valid">Save</button>
         </div>
       </div>
     </form>
