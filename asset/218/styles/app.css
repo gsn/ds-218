@@ -1,4 +1,4 @@
-﻿/*---------- Chain Styles ----------*/
+/*---------- Chain Styles ----------*/
 
 .carousel-indicators li {
   background-color: #999;
@@ -193,23 +193,23 @@
   margin-right: 15px;
 }
 
-.amenities { background: url('../images/amenities.png') no-repeat top left; width: 32px; height: 32px;  float: left; display: block; } 
-.amenities.marianos-bbq { background-position: 0 0; } 
-.amenities.marianos-classroom { background-position: 0 -37px; } 
-.amenities.marianos-delivery { background-position: 0 -74px; } 
-.amenities.marianos-demoKitchen { background-position: 0 -111px; } 
-.amenities.marianos-grilling { background-position: 0 -148px; } 
-.amenities.marianos-oliveOil { background-position: 0 -185px; } 
-.amenities.marianos-oysterBar { background-position: 0 -222px; } 
-.amenities.marianos-patio { background-position: 0 -259px; } 
-.amenities.marianos-pharmacy { background-position: 0 -296px; } 
-.amenities.marianos-spiceShop { background-position: 0 -333px; } 
-.amenities.marianos-squeezd { background-position: 0 -370px; } 
-.amenities.marianos-sushi { background-position: 0 -407px; } 
-.amenities.marianos-sweetShop { background-position: 0 -444px; } 
-.amenities.marianos-vero { background-position: 0 -481px; } 
-.amenities.marianos-wineBar { background-position: 0 -518px; } 
-.amenities.marianos-chicagosfourstarburgerbar { background-image: url('/asset/218/images/icons/chicagosfourstarburgerbar.png'); } 
+.amenities { background: url('../images/amenities.png') no-repeat top left; width: 32px; height: 32px;  float: left; display: block; }
+.amenities.marianos-bbq { background-position: 0 0; }
+.amenities.marianos-classroom { background-position: 0 -37px; }
+.amenities.marianos-delivery { background-position: 0 -74px; }
+.amenities.marianos-demoKitchen { background-position: 0 -111px; }
+.amenities.marianos-grilling { background-position: 0 -148px; }
+.amenities.marianos-oliveOil { background-position: 0 -185px; }
+.amenities.marianos-oysterBar { background-position: 0 -222px; }
+.amenities.marianos-patio { background-position: 0 -259px; }
+.amenities.marianos-pharmacy { background-position: 0 -296px; }
+.amenities.marianos-spiceShop { background-position: 0 -333px; }
+.amenities.marianos-squeezd { background-position: 0 -370px; }
+.amenities.marianos-sushi { background-position: 0 -407px; }
+.amenities.marianos-sweetShop { background-position: 0 -444px; }
+.amenities.marianos-vero { background-position: 0 -481px; }
+.amenities.marianos-wineBar { background-position: 0 -518px; }
+.amenities.marianos-chicagosfourstarburgerbar { background-image: url('/asset/218/images/icons/chicagosfourstarburgerbar.png'); }
 .amenities.marianos-gemvinesaladco { background-image: url('/asset/218/images/icons/gemvinesaladco.png'); }
 .amenities.marianos-guacamolebar{ background-image: url('/asset/218/images/icons/guacamolebar.png'); }
 .amenities.marianos-hotfoods { background-image: url('/asset/218/images/icons/hotfoods.png'); }
@@ -545,7 +545,7 @@
 
 .tasteImages h4 {
   color: #718246;
-  font-family: 'MyFont-demi';  
+  font-family: 'MyFont-demi';
 }
 
 .tasteImages span {
@@ -731,7 +731,7 @@
 .socialNav .list-inline>li .socialLinks {
   padding-bottom: 0;
 }
-  
+
 .socialNav ul{
   padding-top: 6px;
   padding-left: 8px;
@@ -743,7 +743,7 @@
   list-style-type: none;
 }
 
-.socialNav li a,  
+.socialNav li a,
 .footerNav li a {
   color: #7d6d6a;
   text-transform: none;
@@ -1296,8 +1296,8 @@ caption {
   }
 
     .savingsInfoContainer .btn-elipsis:hover
-  {   
-    background-color:#9ba77d;   
+  {
+    background-color:#9ba77d;
   }
 
 .savingsInfoContainer .btn-block
@@ -1322,7 +1322,7 @@ margin-left: -120px;
   border: 1px dashed green;
   padding: 0;
   border-radius: 5px;
- 
+
 }
 	.savingsInfo:hover, .adPodInfo:hover {
 		border-style:solid;
@@ -1349,9 +1349,9 @@ margin-left: -120px;
     margin: auto;
   }
 
-.digital { 
-  display:block; 
-  padding-top:5px;  
+.digital {
+  display:block;
+  padding-top:5px;
   overflow: hidden;
   position: relative;
   line-height:14px;
@@ -1429,6 +1429,14 @@ padding-right: 5px;
     background-image: url('../images/featuredBg.png');
     background-size: 100% 100%;
     color: #fff;
+}
+
+.featured.merry {
+    background-image: url('//upload.gsngrocers.com/images/holiday-bg-red.jpeg') !important;
+}
+
+.featured.holiday {
+    background-image: url('//upload.gsngrocers.com/images/holiday-bg-white.jpeg') !important;
 }
 
 .featured p {
@@ -2210,7 +2218,7 @@ a.list-group-itemMarianos.active, a.list-group-itemMarianos.active:hover, a.list
     overflow: hidden;
 }
 .cssSlideUp.ng-hide {
-    padding:0;    
+    padding:0;
     height:0;
 }
 
@@ -2223,22 +2231,22 @@ a.list-group-itemMarianos.active, a.list-group-itemMarianos.active:hover, a.list
     display: block !important; /* yes, important */
 }
 /*---------- Static Pages ----------*/
-.staticTabs .nav 
+.staticTabs .nav
 {
   margin-bottom: 10px;
 }
 
-.staticTabs ul 
+.staticTabs ul
 {
   width: 676px;
 }
 
-.staticTabs .nav > li 
+.staticTabs .nav > li
 {
   border-bottom: none;
 }
 
-.staticTabs .nav > li > a 
+.staticTabs .nav > li > a
 {
   border-radius: 10px 10px 0 0;
   box-shadow: 3px 0;
@@ -2557,13 +2565,13 @@ legend {
 {
   background-color: white;
   border: solid 1px;
-  border-radius: 10px;  
+  border-radius: 10px;
   text-align: center;
   display: table;
   cursor: pointer;
 }
 
-.panel-button span 
+.panel-button span
 {
     vertical-align:middle;
     display: table-cell;
@@ -2661,7 +2669,7 @@ legend {
   button[data-analytics-event="ClickPrint"]
   {
     display:none;
-  }  
+  }
 
   .itemInfo
   {
@@ -2713,7 +2721,7 @@ dropdown-submenu{position:relative;}
 /*---------- bootstrap auto width ----------*/
 @media (min-width: none) {
     .col-xs-auto { width: auto; }
-	
+
 }
 @media (min-width: 750px) {
     .col-sm-auto { width: auto; }
