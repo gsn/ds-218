@@ -1,7 +1,6 @@
-var storeApp = angular
+﻿var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
     .config(['$routeProvider', function ($routeProvider) {
-      var flippFile = '/proxy/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=content-flipp&type=text/html&nocache=' + gsn.config.Version;
 
       //#region route config
       // storeRequired attribute identify route require a store selection
@@ -34,8 +33,8 @@ var storeApp = angular
             storeRequired: true,
             caseInsensitiveMatch: true
           })
-          .when('/circular/flipp', {
-            templateUrl: flippFile,
+          .when('/circular/flip', {
+            templateUrl: gsn.getThemeUrl('/views/circular-view2.html'),
             storeRequired: true,
             caseInsensitiveMatch: true
           })
@@ -64,7 +63,7 @@ var storeApp = angular
             caseInsensitiveMatch: true
           })
           .when('/emailpreview/registration-facebook', {
-            templateUrl: gsn.getContentUrl('/views/email/registration-facebook.html'),
+            templateUrl: gsn.getContentUrl('/views/email/registration-facebook.html'), 
             layout: gsn.getContentUrl('/views/layout-empty.html'),
             caseInsensitiveMatch: true
           })
@@ -72,7 +71,7 @@ var storeApp = angular
             templateUrl: gsn.getThemeUrl('/views/empty.html'),
             storeRequired: true,
             caseInsensitiveMatch: true,
-			      controller: 'EventsController'
+		      	controller: 'EventsController'
           })
           .when('/mealplannerfull', {
             templateUrl: gsn.getContentUrl('/views/meal-planner.html'),
@@ -287,6 +286,10 @@ var storeApp = angular
             templateUrl: gsn.getContentUrl('/views/custom/lamarmoore.html'),
             caseInsensitiveMatch: true
           })
+          .when('/belindachang', {
+            templateUrl: gsn.getContentUrl('/views/custom/belindachang.html'),
+            caseInsensitiveMatch: true
+          })
 		      .when('/myaccount', {
             templateUrl: gsn.getThemeUrl('/views/roundy-account.html'),
             requireLogin: true,
@@ -301,16 +304,16 @@ var storeApp = angular
             controller: 'StaticContentCtrl',
             caseInsensitiveMatch: true
           });
-
-  		//Task #1373
-  		var eventUrlsToRedirect = ['/bucktown', '/westloop', '/bridgeport', '/arlingtonheights', '/aurora', '/buffalogrove', '/edgewater', '/elmhurst', '/evergreenpark', '/frankfort', '/glenvieweast', '/glenviewwest', '/gurnee', '/harwoodheights', '/jeffersonpark', '/lakeshoreeast', '/lakezurich', '/newcity', '/northbrook', '/northfield', '/oaklawn', '/parkridge', '/ravenswood', '/roscoevillage', '/shorewood', '/skokie', '/southloop', '/ukrainianvillage', '/vernonhills', '/westernsprings', '/wheaton'];
-  		angular.forEach(eventUrlsToRedirect, function(url) {
-  			$routeProvider.when(url, {
-  				redirectTo: function(routeParams) {
-  					window.location = 'http://www.marianos.eventbrite.com';
-  				}
-  			  });
-  		});
+		
+		//Task #1373
+		var eventUrlsToRedirect = ['/bucktown', '/westloop', '/bridgeport', '/arlingtonheights', '/aurora', '/buffalogrove', '/edgewater', '/elmhurst', '/evergreenpark', '/frankfort', '/glenvieweast', '/glenviewwest', '/gurnee', '/harwoodheights', '/jeffersonpark', '/lakeshoreeast', '/lakezurich', '/newcity', '/northbrook', '/northfield', '/oaklawn', '/parkridge', '/ravenswood', '/roscoevillage', '/shorewood', '/skokie', '/southloop', '/ukrainianvillage', '/vernonhills', '/westernsprings', '/wheaton'];
+		angular.forEach(eventUrlsToRedirect, function(url) {
+			$routeProvider.when(url, {
+				redirectTo: function(routeParams) {
+					window.location = 'http://www.marianos.eventbrite.com';
+				}
+			  });
+		});
       //#endregion
     }]);
 
@@ -422,7 +425,7 @@ storeApp.controller('ContactUsCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$timeou
   };
 
   $scope.activate();
-  //#region Internal Methods
+  //#region Internal Methods        
   function getData() {
     return [
         {
@@ -1042,7 +1045,7 @@ storeApp.controller('StaticContentCtrl', ['$scope', 'gsnApi', '$location', '$win
       '/recipes/recipevideos': '/recipevideo',
       '/shop/managelist': '/mylist'
     };
-
+    
   if (hasAspx) {
     pathToConvert = pathToConvert.replace('.aspx', '');
   }
@@ -1066,7 +1069,7 @@ storeApp.controller('StaticContentCtrl', ['$scope', 'gsnApi', '$location', '$win
       newPath = tastemakerConfig.Description;
     }
   }
-
+    
   if (newPath.length > 0) {
     $timeout(function() {
       $location.url(newPath);
