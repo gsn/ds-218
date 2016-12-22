@@ -1502,11 +1502,12 @@ caption {
 
 .featured {
     background-size: 100% 100%;
+    background-color: #ccc;
     color: #fff;
 }
 
 .featured.freefriday {
-    background-image: url('../images/featuredBg.png');
+    background-image: url('../images/featuredBg.png') !important;
 }
 
 .featured.merry {
