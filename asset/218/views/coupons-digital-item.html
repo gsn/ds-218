@@ -1,5 +1,12 @@
 <div class="savingsInfo" ng-class="{'greyed': isOnClippedList(item), 'featured': item.IsFeatured, 'merry': item.BrandName.indexOf('erry') > 0, 'holiday': item.BrandName.indexOf('oliday') > 0, 'freefriday': item.BrandName.indexOf('riday') > 0  }">
-<div class="row">
+  <div class="hidden meta">
+    <div class="product-code">{{item.ProductCode}}</div>
+    <div class="product-id">{{item.Id}}</div>
+    <div class="product-subcategory">{{item.SubCategory}}</div>
+    <div class="product-priority">{{item.OfferPriority}}</div>
+    <div class="product-tags">{{item.Tags}}</div>
+  </div>
+  <div class="row">
     <div class="imageContainer">
       <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" alt="{{item.Description1}}" />
     </div>
