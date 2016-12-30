@@ -1,4 +1,4 @@
-<div class="savingsInfo" ng-class="{'greyed': isOnClippedList(item), 'featured': item.IsFeatured, 'merry': item.BrandName.indexOf('erry') > 0, 'holiday': item.BrandName.indexOf('oliday') > 0, 'freefriday': item.BrandName.indexOf('riday') > 0  }">
+<div class="savingsInfo" ng-class="{'greyed': isOnClippedList(item), 'featured': item.IsFeatured, 'merry': item.BrandName.indexOf('erry') > 0, 'holiday': item.BrandName.indexOf('oliday') > 0, 'freefriday': item.BrandName.indexOf('riday') > 0, 'tags-{{item.Tags}}': item.Tags }">
   <div class="hidden meta">
     <div class="product-code">{{item.ProductCode}}</div>
     <div class="product-id">{{item.Id}}</div>
