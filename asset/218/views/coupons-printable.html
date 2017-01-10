@@ -23,39 +23,6 @@
             </a>
           </div>
         </div>
-        <div class="row couponsControls">
-          <div class="pull-right">
-            <div>
-              <span class="col-xs-4 col-sm-auto col-md-auto" style="padding: 0;">Sort By:</span>
-              <div class="btn-group col-xs-8 col-sm-auto col-md-auto dropdown" dropdown style="padding: 0;">
-                <button type="button" class="btn btn-default btnMarianos btn-xs dropdown-toggle" data-toggle="dropdown">
-                  {{sortByName}} <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="javascript:void(0)" data-ng-click="sortBy = 'EndDate';sortByName='About to Expire';filterByComplex=''">About to Expire</a></li>
-                  <li class="dropdown-submenu">
-                    <a href="javascript:void(0)" data-ng-click="sortBy = 'CategoryName';sortByName='Department';filterByComplex=''">Department</a>
-                    <ul class="dropdown-menu">
-                      <li ng-repeat="department in departments">
-                        <a href="javascript:void(0)" data-ng-click="changeFilter({CategoryId: {{department.CategoryId}}}, '{{department.CategoryName}}')">{{department.CategoryName}}</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <form name="searchForm">
-              <div class="searchField">
-                <span class="col-xs-5 col-sm-auto col-md-auto" style="padding-right: 5px;">Search By:</span>
-                <input class="col-xs-7 col-sm-auto col-md-auto" type="text" placeholder="Enter Keyword" data-ng-model="filterBy" name="filterby" />
-              </div>
-            </form>
-            <button class="btn btn-default btnMarianos btn-xs" data-ng-click="selectedCoupons.printedCouponOnly = !selectedCoupons.printedCouponOnly">
-              <i class="fa fa-square-o" style="padding-left: 2px;" data-ng-hide="selectedCoupons.printedCouponOnly"></i><i class="fa fa-check-square-o" data-ng-show="selectedCoupons.printedCouponOnly"></i>
-              Show Printed Coupons
-            </button>
-          </div>
-        </div>
         <div class="coupons" style="width: 100%; text-align: center">
         <noscript>
 <p>Coupons powered by <a href="https://www.coupons.com?pid=13903&nid=10&zid=xh20&bid=1436600001">Coupons.com</a></p>
