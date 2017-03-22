@@ -1,4 +1,4 @@
-﻿<div class="visible-lg visible-md" data-ng-class="{ 'visible-sm visible-xs': gvm.menuInactive }">
+<div class="visible-lg visible-md" data-ng-class="{ 'visible-sm visible-xs': gvm.menuInactive }">
   <ul class="nav nav-tabs nav-stacked" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <li class="hidden-lg hidden-md">
       <div class="input-group searchField">
@@ -21,8 +21,12 @@
       <ul class="dropdown-menu" data-ng-if="menu.Path == '#'" >
         <li data-ng-repeat="sm in menu.SubMenu | orderBy:'Position'" itemprop="name">
           <a data-ng-href="{{sm.Path}}" itemprop="url" target="{{sm.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="sm.Name | trustedHtml"></span></a>
-        </li>  
+        </li>
       </ul>
     </li>
+    <!--
+    <li>
+      <a href="https://shop.staging.marianos.com" itemprop="url" target="_blank">shop online</a>
+    </li> -->
   </ul>
 </div>
