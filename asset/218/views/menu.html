@@ -15,7 +15,7 @@
       </div>
     </li>
     <li>
-      <a href="https://shop.staging.marianos.com" itemprop="url" target="_blank">Click List</a>
+      <a href="https://shop.staging.marianos.com" itemprop="url" target="_blank">shop online</a>
     </li>
     <li data-ng-repeat="menu in siteMenu | orderBy:'Position'" class="dropdown" dropdown itemprop="name">
       <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}" gsn-roundy-events="gsnRoundyEvents"><span data-ng-bind-html="menu.Name | trustedHtml"></span></a>
