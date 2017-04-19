@@ -51,12 +51,13 @@
         <div class="row" data-ng-include="getThemeUrl('/views/layout-sidebar-bottom.html')"></div>
       </div>
       <div class="col-md-10" data-ng-include="getThemeUrl('/views/static-content2/' + pcvm.layout + '.html')"></div>
+
+      <style>
+      .staticContent img {
+          max-width: 100%;
+      }
+      </style>
   </div>
 </div>
 <div class="end"></div>
 
-<style>
-.staticContent img {
-    max-width: 100%;
-}
-</style>
