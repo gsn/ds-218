@@ -1,4 +1,4 @@
-﻿var storeApp = angular
+var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
     .config(['$routeProvider', function ($routeProvider) {
 
@@ -38,6 +38,11 @@
             storeRequired: true,
             caseInsensitiveMatch: true
           })
+          .when('/circular/flipp', {
+            templateUrl: gsn.getThemeUrl('/views/circular-view2.html'),
+            storeRequired: true,
+            caseInsensitiveMatch: true
+          })
           .when('/contactus', {
             templateUrl: gsn.getContentUrl('/views/contact-us.html'),
             controller: 'ContactUsCtrl',
@@ -63,7 +68,7 @@
             caseInsensitiveMatch: true
           })
           .when('/emailpreview/registration-facebook', {
-            templateUrl: gsn.getContentUrl('/views/email/registration-facebook.html'), 
+            templateUrl: gsn.getContentUrl('/views/email/registration-facebook.html'),
             layout: gsn.getContentUrl('/views/layout-empty.html'),
             caseInsensitiveMatch: true
           })
@@ -71,7 +76,7 @@
             templateUrl: gsn.getThemeUrl('/views/empty.html'),
             storeRequired: true,
             caseInsensitiveMatch: true,
-		      	controller: 'EventsController'
+            controller: 'EventsController'
           })
           .when('/mealplannerfull', {
             templateUrl: gsn.getContentUrl('/views/meal-planner.html'),
@@ -290,7 +295,7 @@
             templateUrl: gsn.getContentUrl('/views/custom/belindachang.html'),
             caseInsensitiveMatch: true
           })
-		      .when('/myaccount', {
+          .when('/myaccount', {
             templateUrl: gsn.getThemeUrl('/views/roundy-account.html'),
             requireLogin: true,
             caseInsensitiveMatch: true
@@ -299,36 +304,55 @@
             templateUrl: gsn.getThemeUrl('/views/roundy-apology-page.html'),
             caseInsensitiveMatch: true
           })
+          .when('/coupons/printable2', {
+            templateUrl: '//cdn.gsngrocers.com/asset/roundy/views/engine/static-content.html',
+            caseInsensitiveMatch: true
+          })
+          .when('/tastemakers/ashleyp', {
+            templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'),
+            caseInsensitiveMatch: true
+          })
+          .when('/tastemakers/johncoletta', {
+            templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'),
+            caseInsensitiveMatch: true
+          })
+          .when('/tastemakers/home', {
+            templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'),
+            caseInsensitiveMatch: true
+          })
+          .when('/vero2', {
+            templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'),
+            caseInsensitiveMatch: true
+          })
           .otherwise({
             templateUrl: gsn.getContentUrl('/views/static-content.html'),
-            controller: 'StaticContentCtrl',
             caseInsensitiveMatch: true
           });
-		
-		//Task #1373
-		var eventUrlsToRedirect = ['/bucktown', '/westloop', '/bridgeport', '/arlingtonheights', '/aurora', '/buffalogrove', '/edgewater', '/elmhurst', '/evergreenpark', '/frankfort', '/glenvieweast', '/glenviewwest', '/gurnee', '/harwoodheights', '/jeffersonpark', '/lakeshoreeast', '/lakezurich', '/newcity', '/northbrook', '/northfield', '/oaklawn', '/parkridge', '/ravenswood', '/roscoevillage', '/shorewood', '/skokie', '/southloop', '/ukrainianvillage', '/vernonhills', '/westernsprings', '/wheaton'];
-		angular.forEach(eventUrlsToRedirect, function(url) {
-			$routeProvider.when(url, {
-				redirectTo: function(routeParams) {
-					window.location = 'http://www.marianos.eventbrite.com';
-				}
-			  });
-		});
+
+    //Task #1373
+    var eventUrlsToRedirect = ['/bucktown', '/westloop', '/bridgeport', '/arlingtonheights', '/aurora', '/buffalogrove', '/edgewater', '/elmhurst', '/evergreenpark', '/frankfort', '/glenvieweast', '/glenviewwest', '/gurnee', '/harwoodheights', '/jeffersonpark', '/lakeshoreeast', '/lakezurich', '/newcity', '/northbrook', '/northfield', '/oaklawn', '/parkridge', '/ravenswood', '/roscoevillage', '/shorewood', '/skokie', '/southloop', '/ukrainianvillage', '/vernonhills', '/westernsprings', '/wheaton'];
+    angular.forEach(eventUrlsToRedirect, function(url) {
+      $routeProvider.when(url, {
+        redirectTo: function(routeParams) {
+          window.location = 'http://www.marianos.eventbrite.com';
+        }
+        });
+    });
       //#endregion
     }]);
 
 // EventsController
 
 storeApp.controller('EventsController', ['$scope', 'gsnApi', '$timeout', 'gsnStore', function ($scope, gsnApi, $timeout, gsnStore) {
-	$timeout(function() {
-		gsnStore.getStore().then(function (store) {
-			if(!store) {
-				// this should never happen
-				return;
-			}
-			gsnApi.goUrl(store.Redirect, '_reload');
-		});
-	}, 50);
+  $timeout(function() {
+    gsnStore.getStore().then(function (store) {
+      if(!store) {
+        // this should never happen
+        return;
+      }
+      gsnApi.goUrl(store.Redirect, '_reload');
+    });
+  }, 50);
 }]);
 
 // ContactUsCtrl
@@ -425,7 +449,7 @@ storeApp.controller('ContactUsCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$timeou
   };
 
   $scope.activate();
-  //#region Internal Methods        
+  //#region Internal Methods
   function getData() {
     return [
         {
@@ -461,11 +485,6 @@ storeApp.controller('ContactUsCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$timeou
         {
           "Value": "Employment",
           "Text": "Employment",
-          "ParentOption": ""
-        },
-        {
-          "Value": "Chairman Bob",
-          "Text": "Chairman Bob",
           "ParentOption": ""
         },
         {
@@ -1000,80 +1019,9 @@ storeApp.controller('ContactUsCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$timeou
           "Value": "Found foreign object in product",
           "Text": "Found foreign object in product",
           "ParentOption": "Foreign Object"
-        }, {
-          "Value": "Comments about Chairman Bob",
-          "Text": "Comments about Chairman Bob",
-          "ParentOption": "Chairman Bob"
         }
     ];
   }
   //#endregion
 }]);
 
-// StaticContentCtrl
-storeApp.controller('StaticContentCtrl', ['$scope', 'gsnApi', '$location', '$window', '$timeout', function ($scope, gsnApi, $location, $window, $timeout) {
-  var pathToConvert = $scope.currentPath.replace(/\/+$/g, ''),
-    hasAspx = $scope.currentPath.indexOf('.aspx') > 0,
-    newPath = '',
-    search = $location.search(),
-    deepPaths = {
-      '/contact': '/contactus',
-      '/recipes/recipevideos': '/recipevideo',
-      '/shop/managelist': '/mylist'
-    },
-    shallowPaths = {
-      '/about-us': '/aboutus',
-      '/default': '/',
-      '/giving-back': '/givingback',
-      '/roundys-foundation': '/roundysfoundation',
-      '/charitable-donations': '/charitabledonations',
-      '/store-field-trips': '/storefieldtrips',
-      '/shop/weeklyad': '/circular',
-      '/shop/coupons': '/coupons',
-      '/shop/personalizedspecials': '/myspecials',
-      '/shop/mypatry': '/mypantry',
-      '/shop/specials': '/specials',
-      '/shop/product': '/product',
-      '/recipes/recipefull': '/recipe?id=[RecipeID]',
-      '/recipes/article': '/article?id=[ArticleID]',
-      '/recipes/recipecenter': '/recipecenter',
-      '/profile/privacypolicy': '/privacy',
-      '/profile/signin': '/',
-      '/profile/recoverusername': '/recoverusername',
-      '/profile/recoverpassword': '/recoverpassword',
-      '/profile/signup': '/registration',
-      '/recipes/recipevideos': '/recipevideo',
-      '/shop/managelist': '/mylist'
-    };
-    
-  if (hasAspx) {
-    pathToConvert = pathToConvert.replace('.aspx', '');
-  }
-
-  newPath = gsnApi.isNull(deepPaths[pathToConvert], '');
-
-  if (hasAspx) {
-    if (newPath.length <= 0) {
-      newPath = gsnApi.isNull(shallowPaths[pathToConvert], pathToConvert);
-    }
-
-    newPath = newPath.replace('[RecipeID]', search.RecipeID).replace('[ArticleID]', search.ArticleID);
-    if (newPath.length <= 0 && pathToConvert.indexOf('/', 1) > 0) {
-      newPath = '/';
-    }
-  }
-
-  if (pathToConvert == '/tastemakers') {
-    var tastemakerConfig = gsnApi.getThemeConfig('/tastemakers');
-    if (tastemakerConfig) {
-      newPath = tastemakerConfig.Description;
-    }
-  }
-    
-  if (newPath.length > 0) {
-    $timeout(function() {
-      $location.url(newPath);
-			$location.replace();
-    }, 5);
-  }
-}]);

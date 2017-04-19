@@ -25,8 +25,11 @@
       </ul>
     </li>
     <!--
-    <li>
-      <a href="https://shop.staging.marianos.com" itemprop="url" target="_blank">shop online</a>
+    <li data-ng-show="(newDate() < newDate('2017-04-27'))">
+      <a href="https://shop.staging.marianos.com" itemprop="url" title="staging">order online</a>
     </li> -->
+    <li data-ng-show="(newDate() >= newDate('2017-04-27'))">
+      <a href="https://shop.marianos.com" itemprop="url">order online</a>
+    </li>
   </ul>
 </div>
