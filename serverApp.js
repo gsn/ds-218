@@ -6,7 +6,7 @@ var express = require('express'),
     fs = require('fs'),
     gulp = require('gulp'),
     url = require('url');
-    
+
 var servicePath = __dirname;
 var apps = {};
 
@@ -21,9 +21,9 @@ function startServer(chainId) {
   });
   app.use(methodOverride());
 
-  // make sure that asset folder access are static file 
+  // make sure that asset folder access are static file
   app.use('/', express.static(servicePath));
-  
+
   // handle the rest as html
   app.get('*', function (request, response) {
     var myPath = url.parse(request.url).pathname.toLowerCase();
@@ -32,7 +32,7 @@ function startServer(chainId) {
 
     console.log(myPath);
     if (myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0) {
-      
+
       var fullPath = path.join(servicePath, myPath);
       if (!fs.existsSync(fullPath)) {
         response.status(404).send(fullPath + ' not found.');
@@ -40,9 +40,9 @@ function startServer(chainId) {
       }
 
       var k = fs.readFileSync(fullPath, 'utf8');
-      k = k.replace('https://clientapix.gsn2.com/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/[chainid]/storeApp.js?nocache=1', '/asset/[chainid]/storeApp.js');
+      k = k.replace('https://clientapi-stg.brickinc.net/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/[chainid]/storeApp.js?nocache=1', '/asset/[chainid]/storeApp.js');
       k = k.replace(/\[chainname\]/gi, 'localhost:' + port).replace(/\[chainid\]/gi, chainId);
-      k = k.replace('cdn-staging.gsngrocers.com/asset/' + chainId, 'localhost:' + port + '/asset/' + chainId);
+      k = k.replace('cdn-stg.brickinc.net/asset/' + chainId, 'localhost:' + port + '/asset/' + chainId);
       k = k.replace(/.min.js\?nocache=[^'"]+/gi, ".js?nocache=2");
       response.send(k);
     }
@@ -64,7 +64,7 @@ else {
   process.argv.forEach(function (val, index, array) {
     // skip first two arguments
     if (index > 1)
-    {  
+    {
       startServer(val);
     }
   });

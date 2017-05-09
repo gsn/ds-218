@@ -305,7 +305,7 @@ var storeApp = angular
             caseInsensitiveMatch: true
           })
           .when('/coupons/printable2', {
-            templateUrl: '//cdn.gsngrocers.com/asset/roundy/views/engine/static-content.html',
+            templateUrl: '//cdn.brickinc.net/asset/roundy/views/engine/static-content.html',
             caseInsensitiveMatch: true
           })
           .when('/tastemakers/ashleyp', {
