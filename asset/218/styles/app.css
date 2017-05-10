@@ -163,7 +163,7 @@
 }
 
 .searchField input {
-    background: url('//upload.gsngrocers.com/chainfiles/218/creative/201612/636186195198635473-search.png') no-repeat scroll 4px 4px;
+    background: url('//upload.brickinc.net/chainfiles/218/creative/201612/636186195198635473-search.png') no-repeat scroll 4px 4px;
     background-color: #ffffff;
     padding-left: 21px;
     padding-right: 0;
@@ -201,7 +201,7 @@
 }
 
 .amenities {
-    background: url('//upload.gsngrocers.com/chainfiles/218/creative/201612/636186195449268333-amenities.png') no-repeat top left;
+    background: url('//upload.brickinc.net/chainfiles/218/creative/201612/636186195449268333-amenities.png') no-repeat top left;
     width: 32px;
     height: 32px;
     float: left;
@@ -1507,15 +1507,15 @@ caption {
 }
 
 .featured.freefriday {
-    background-image: url('//upload.gsngrocers.com/chainfiles/218/creative/201612/636186195074894005-featuredbg.png') !important;
+    background-image: url('//upload.brickinc.net/chainfiles/218/creative/201612/636186195074894005-featuredbg.png') !important;
 }
 
 .featured.merry {
-    background-image: url('//upload.gsngrocers.com/images/holiday-bg-red.jpeg') !important;
+    background-image: url('//upload.brickinc.net/images/holiday-bg-red.jpeg') !important;
 }
 
 .featured.holiday {
-    background-image: url('//upload.gsngrocers.com/images/holiday-bg-white.jpeg') !important;
+    background-image: url('//upload.brickinc.net/images/holiday-bg-white.jpeg') !important;
 }
 
 .featured p {
@@ -1644,14 +1644,14 @@ td.nutr-border {
 }
 
 .features {
-    background-image: url('//upload.gsngrocers.com/chainfiles/218/creative/201612/636186194841951500-rssbox.png');
+    background-image: url('//upload.brickinc.net/chainfiles/218/creative/201612/636186194841951500-rssbox.png');
     background-repeat: no-repeat;
     border-bottom: 1px solid #7d6d6a;
     margin-bottom: 10px;
 }
 
 .events {
-    background-image: url('//upload.gsngrocers.com/chainfiles/218/creative/201612/636186196232317273-eventsbox.png');
+    background-image: url('//upload.brickinc.net/chainfiles/218/creative/201612/636186196232317273-eventsbox.png');
     background-repeat: no-repeat;
 }
 
@@ -2138,7 +2138,7 @@ a.list-group-itemMarianos.active, a.list-group-itemMarianos.active:hover, a.list
 }
 
 .itemInfo > div.circular-item> div:nth-child(2):before {
-    content: url('//upload.gsngrocers.com/chainfiles/218/creative/201612/636186196648381914-checkbox.png');
+    content: url('//upload.brickinc.net/chainfiles/218/creative/201612/636186196648381914-checkbox.png');
     position: relative;
     top: 4px;
 }
