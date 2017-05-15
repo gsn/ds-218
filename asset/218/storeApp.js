@@ -305,7 +305,7 @@ var storeApp = angular
             caseInsensitiveMatch: true
           })
           .when('/coupons/printable2', {
-            templateUrl: '//cdn.brickinc.net/asset/roundy/views/engine/static-content.html',
+            templateUrl: '//cdn.gsngrocers.com/asset/roundy/views/engine/static-content.html',
             caseInsensitiveMatch: true
           })
           .when('/tastemakers/ashleyp', {
@@ -326,6 +326,7 @@ var storeApp = angular
           })
           .otherwise({
             templateUrl: gsn.getContentUrl('/views/static-content.html'),
+            controller: 'StaticContentCtrl',
             caseInsensitiveMatch: true
           });
 
@@ -1025,3 +1026,70 @@ storeApp.controller('ContactUsCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$timeou
   //#endregion
 }]);
 
+// StaticContentCtrl
+storeApp.controller('StaticContentCtrl', ['$scope', 'gsnApi', '$location', '$window', '$timeout', function ($scope, gsnApi, $location, $window, $timeout) {
+  var pathToConvert = $scope.currentPath.replace(/\/+$/g, ''),
+    hasAspx = $scope.currentPath.indexOf('.aspx') > 0,
+    newPath = '',
+    search = $location.search(),
+    deepPaths = {
+      '/contact': '/contactus',
+      '/recipes/recipevideos': '/recipevideo',
+      '/shop/managelist': '/mylist'
+    },
+    shallowPaths = {
+      '/about-us': '/aboutus',
+      '/default': '/',
+      '/giving-back': '/givingback',
+      '/roundys-foundation': '/roundysfoundation',
+      '/charitable-donations': '/charitabledonations',
+      '/store-field-trips': '/storefieldtrips',
+      '/shop/weeklyad': '/circular',
+      '/shop/coupons': '/coupons',
+      '/shop/personalizedspecials': '/myspecials',
+      '/shop/mypatry': '/mypantry',
+      '/shop/specials': '/specials',
+      '/shop/product': '/product',
+      '/recipes/recipefull': '/recipe?id=[RecipeID]',
+      '/recipes/article': '/article?id=[ArticleID]',
+      '/recipes/recipecenter': '/recipecenter',
+      '/profile/privacypolicy': '/privacy',
+      '/profile/signin': '/',
+      '/profile/recoverusername': '/recoverusername',
+      '/profile/recoverpassword': '/recoverpassword',
+      '/profile/signup': '/registration',
+      '/recipes/recipevideos': '/recipevideo',
+      '/shop/managelist': '/mylist'
+    };
+
+  if (hasAspx) {
+    pathToConvert = pathToConvert.replace('.aspx', '');
+  }
+
+  newPath = gsnApi.isNull(deepPaths[pathToConvert], '');
+
+  if (hasAspx) {
+    if (newPath.length <= 0) {
+      newPath = gsnApi.isNull(shallowPaths[pathToConvert], pathToConvert);
+    }
+
+    newPath = newPath.replace('[RecipeID]', search.RecipeID).replace('[ArticleID]', search.ArticleID);
+    if (newPath.length <= 0 && pathToConvert.indexOf('/', 1) > 0) {
+      newPath = '/';
+    }
+  }
+
+  if (pathToConvert == '/tastemakers') {
+    var tastemakerConfig = gsnApi.getThemeConfig('/tastemakers');
+    if (tastemakerConfig) {
+      newPath = tastemakerConfig.Description;
+    }
+  }
+
+  if (newPath.length > 0) {
+    $timeout(function() {
+      $location.url(newPath);
+      $location.replace();
+    }, 5);
+  }
+}]);
